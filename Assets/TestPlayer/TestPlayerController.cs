@@ -7,15 +7,16 @@ public class TestPlayerController : MonoBehaviour
 
     public GameObject target;
 
-    public float acceleration = 0.0f;
+    public float acceleration = 1.0f;
 
     public float startMovementSpeed = 1.0f;
 
     public float margin = 1.0f;
 
-    float movementSpeed = 1.0f;
+    public float movementSpeed = 1.0f;
 
     private Vector3 newPos;
+    private float lastDif = 0;
 
     // Use this for initialization
     void Start()
@@ -27,22 +28,33 @@ public class TestPlayerController : MonoBehaviour
     void Update()
     {
 
-        if (((newPos.x - transform.position.x) > margin) || ((newPos.y - transform.position.y) > margin))
-        {
-            movementSpeed = startMovementSpeed;
-        }
+        //Debug.Log("Delta X: " + (newPos.x - transform.position.x));
+        //Debug.Log("Delta Y: " + (newPos.y - transform.position.y));
 
 
 
         newPos = transform.position;
 
-        movementSpeed += acceleration;
+        //Debug.Log("Old pos: " + newPos.x);
 
-        newPos.x += ((transform.position.x - target.transform.position.x) / Mathf.Abs(transform.position.x - target.transform.position.x)) * movementSpeed * Time.deltaTime;
+        newPos += (target.transform.position - transform.position).normalized * movementSpeed * Time.deltaTime;
 
-        newPos.y += ((transform.position.y - target.transform.position.y) / Mathf.Abs(transform.position.y - target.transform.position.y)) * movementSpeed * Time.deltaTime;
+        //movementSpeed += acceleration;
 
+        //Debug.Log((lastDif - (target.transform.position - newPos).magnitude));
+        //Debug.Log((target.transform.position - transform.position).magnitude);
+        if ((target.transform.position - transform.position).magnitude < margin)// || (Mathf.Abs((lastDif - (target.transform.position - newPos).magnitude)) < margin))
+        {
+            //Debug.Log("Reset!");
+            movementSpeed = startMovementSpeed;
+        }
+        else
+        {
+            transform.position = newPos;
+        }
 
-        transform.position = newPos;
+        lastDif = (target.transform.position - transform.position).magnitude;
+
+        //Debug.Log("New pos: " + newPos.x);
     }
 }
