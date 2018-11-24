@@ -42,5 +42,7 @@ public class TestPlayerController : MonoBehaviour
 
         newPos.y += ((transform.position.y - target.transform.position.y) / Mathf.Abs(transform.position.y - target.transform.position.y)) * movementSpeed * Time.deltaTime;
 
+
+        transform.position = newPos;
     }
 }
