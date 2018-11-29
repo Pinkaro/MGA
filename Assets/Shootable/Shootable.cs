@@ -39,14 +39,14 @@ public class Shootable : MonoBehaviour
 	{
 	    if (Firerate == 0.0f) // Shoot on click
 	    {
-	        if (Input.GetButton("Fire1_P1"))
+	        if (Input.GetAxis("Fire1_P1") > 0.0f)
 	        {
 	            Shoot();
 	        }
         }
 	    else
 	    {
-	        if (Input.GetButton("Fire1_P1") && Time.time > timeToFire)
+	        if ((Input.GetAxis("Fire1_P1") > 0.0f) && Time.time > timeToFire)
 	        {
 	            timeToFire = Time.time + 1 / Firerate;
                 Shoot();
