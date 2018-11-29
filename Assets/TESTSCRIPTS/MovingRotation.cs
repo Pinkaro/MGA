@@ -16,26 +16,36 @@ public class MovingRotation : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    if (Input.GetKey("a"))
-	    {
-            transform.Rotate(Vector3.forward * -rotationSpeed);
-	    }
-
-	    if (Input.GetKey("d"))
-	    {
-	        transform.Rotate(Vector3.forward * rotationSpeed);
-        }
-
-	    //if (Input.GetKey("w"))
+	    //if (Input.GetAxis("Horizontal_P1") < 0)
 	    //{
-	    //    firepoint = GameObject.Find("Firepoint").transform;
-     //       transform.Translate((firepoint.position - transform.position) * translationSpeed);
+     //       transform.Rotate(Vector3.forward * -rotationSpeed);
 	    //}
 
-	    //if (Input.GetKey("s"))
+	    //if (Input.GetAxis("Horizontal_P1") > 0)
 	    //{
-	    //    firepoint = GameObject.Find("Firepoint").transform;
-     //       transform.Translate((firepoint.position - transform.position) * -translationSpeed);
+	    //    transform.Rotate(Vector3.forward * rotationSpeed);
      //   }
+
+	    if (Input.GetAxis("Accelerate_P1") > 0)
+	    {
+	        Debug.Log("Accelerate");
+	    }
+
+	    if (Input.GetButton("Brake_P1"))
+	    {
+	        Debug.Log("Brake");
+	    }
+
+        //if (Input.GetKey("w"))
+        //{
+        //    firepoint = GameObject.Find("Firepoint").transform;
+        //       transform.Translate((firepoint.position - transform.position) * translationSpeed);
+        //}
+
+        //if (Input.GetKey("s"))
+        //{
+        //    firepoint = GameObject.Find("Firepoint").transform;
+        //       transform.Translate((firepoint.position - transform.position) * -translationSpeed);
+        //   }
     }
 }
