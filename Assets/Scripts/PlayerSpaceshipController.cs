@@ -23,7 +23,7 @@ public class PlayerSpaceshipController : MonoBehaviour
 
         string[] controllers = Input.GetJoystickNames();
 
-        Debug.Log("Controllers detected: " + controllers.Length);
+        Debug.Log($"Controllers detected: {controllers.Length}");
 
         foreach (string controller in controllers)
         {
@@ -32,12 +32,12 @@ public class PlayerSpaceshipController : MonoBehaviour
     }
 
     void FixedUpdate () {
-	    if (Input.GetAxis("Horizontal_" + Player) != 0)
+	    if (Input.GetAxis($"Horizontal_{Player}") != 0)
 	    {
 	        Turn();
 	    }
 
-	    if (Input.GetAxis("Accelerate_" + Player) > 0)
+	    if (Input.GetAxis($"Accelerate_{Player}") > 0)
 	    {
 	        Accelerate();
         }
@@ -46,7 +46,7 @@ public class PlayerSpaceshipController : MonoBehaviour
 	        Brake(SlowBrakeForce);
 	    }
 
-	    if (Input.GetButton("Brake_" + Player))
+	    if (Input.GetButton($"Brake_{Player}"))
 	    {
 	        Brake(BrakeForce);
 	    }
@@ -54,7 +54,7 @@ public class PlayerSpaceshipController : MonoBehaviour
 
     private void Turn()
     {
-        var rotation = rotationSpeed * -Input.GetAxisRaw("Horizontal_" + Player);
+        var rotation = rotationSpeed * -Input.GetAxisRaw($"Horizontal_{Player}");
         var magnitude = rb.velocity.magnitude/TurnModifier;
         var speed = magnitude >= 1 ? magnitude : 1;
         rotation /= speed;
@@ -63,16 +63,16 @@ public class PlayerSpaceshipController : MonoBehaviour
 
     private void Accelerate()
     {
-        Debug.Log("Accelerate");
+        //Debug.Log("Accelerate");
         rb.AddRelativeForce(new Vector2(0, AccelerationForce), ForceMode2D.Force);
     }
 
-    private void Brake(float BrakeForce)
+    private void Brake(float brakeForce)
     {
-        Debug.Log("Brake");
+        //Debug.Log("Brake");
         if (rb.velocity.magnitude > BrakeThreshold)
         {
-            rb.velocity *= BrakeForce;
+            rb.velocity *= brakeForce;
         }
         else
         {

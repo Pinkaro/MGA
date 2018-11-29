@@ -52,7 +52,7 @@ public class ProjectileLogic : MonoBehaviour
     {
         HealthManager hit = collision.gameObject.GetComponent<HealthManager>();
 
-        hit.ApplyHealthEffect(-damage);
+        hit?.ApplyHealthEffect(-damage);
 
         Destroy(this.gameObject);
     }
