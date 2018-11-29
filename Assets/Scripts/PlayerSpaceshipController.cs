@@ -63,16 +63,16 @@ public class PlayerSpaceshipController : MonoBehaviour
 
     private void Accelerate()
     {
-        Debug.Log("Accelerate");
+        //Debug.Log("Accelerate");
         rb.AddRelativeForce(new Vector2(0, AccelerationForce), ForceMode2D.Force);
     }
 
-    private void Brake(float BrakeForce)
+    private void Brake(float brakeForce)
     {
-        Debug.Log("Brake");
+        //Debug.Log("Brake");
         if (rb.velocity.magnitude > BrakeThreshold)
         {
-            rb.velocity *= BrakeForce;
+            rb.velocity *= brakeForce;
         }
         else
         {
