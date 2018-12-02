@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitboxSetup : MonoBehaviour
+public class DiscHitboxSetup : MonoBehaviour
 {
 
     public int smothness = 8;
