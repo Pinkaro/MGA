@@ -15,7 +15,7 @@ public class TerminalController : MonoBehaviour
 
     private bool registeredModule;
 
-    private DiscMovement movement;
+    private PlayerInDiscController _controller;
 
     // Use this for initialization
     void Start ()
@@ -30,7 +30,7 @@ public class TerminalController : MonoBehaviour
 	void FixedUpdate () {
 	    if (Input.GetKey(KeyCode.Escape)&&this.registeredModule)
 	    {
-	        this.movement.clearModule();
+	        this._controller.clearModule();
 	    }
     }
 
@@ -40,11 +40,11 @@ public class TerminalController : MonoBehaviour
         player = other.gameObject;
         if (this.player != null)
         {
-            movement = this.player.GetComponent<DiscMovement>();
+            _controller = this.player.GetComponent<PlayerInDiscController>();
         }
-        if (this.movement != null)
+        if (this._controller != null)
         {
-            this.registeredModule = movement.RegisterModule(this.Module);
+            this.registeredModule = _controller.RegisterModule(this.Module);
             coroutine = HandleTurretControls();
             StartCoroutine(coroutine);
         }
@@ -53,10 +53,10 @@ public class TerminalController : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log("untriggered");
-        if (this.movement != null)
+        if (this._controller != null)
         {
             this.registeredModule = false;
-            movement.clearModule();
+            _controller.clearModule();
             StopCoroutine(coroutine);
         }
     }

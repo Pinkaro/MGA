@@ -10,9 +10,6 @@ public class PlayerSpaceshipController : MonoBehaviour
     [Range(1.0f, 10.0f)]
     public float rotationSpeed = 5.0f;
 
-    [Range(0.1f, 5.0f)]
-    public float translationSpeed = 0.1f;
-
     [Range(1.0f, 20.0f)]
     public float AccelerationForce = 10.0f;
 
@@ -53,7 +50,7 @@ public class PlayerSpaceshipController : MonoBehaviour
 
 	    if (Input.GetAxis($"Accelerate_{Player}") > 0)
 	    {
-	        Accelerate();
+	        Accelerate(Input.GetAxisRaw($"Accelerate_{Player}"));
         }
 	    else
 	    {
@@ -75,10 +72,10 @@ public class PlayerSpaceshipController : MonoBehaviour
         transform.Rotate(Vector3.forward * (rotation));
     }
 
-    private void Accelerate()
+    private void Accelerate(float force)
     {
         //Debug.Log("Accelerate");
-        rb.AddRelativeForce(new Vector2(0, 1) * AccelerationForce, ForceMode2D.Force);
+        rb.AddRelativeForce(new Vector2(0, 1) * AccelerationForce * force, ForceMode2D.Force);
     }
 
     private void Brake(float brakeForce)

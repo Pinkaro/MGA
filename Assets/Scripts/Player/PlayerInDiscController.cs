@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DiscMovement : MonoBehaviour
+public class PlayerInDiscController : MonoBehaviour
 {
+    public string Player;
 
-    public float movementSpeed = 1.0f;
+    private Rigidbody2D rb;
+    [Range(1.0f, 20.0f)]
+    public float MovementSpeed = 1.0f;
 
     private Vector3 dir;
 
@@ -18,7 +21,7 @@ public class DiscMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public bool RegisterModule(GameObject module)
@@ -47,42 +50,30 @@ public class DiscMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!this.remoteControl)
         {
-            if (Input.GetKey(KeyCode.UpArrow))
+            rb.velocity = 
+                MovementSpeed * new Vector2(Input.GetAxis($"Horizontal_{Player}"), -Input.GetAxis($"Vertical_{Player}")).normalized;
+
+
+            if (Input.GetAxis($"Accelerate_{Player}") > 0)
             {
-                dir += Vector3.up;
+                
             }
 
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetButton($"Brake_{Player}"))
             {
-                dir += Vector3.down;
+                
             }
 
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetButton($"Fire1_{Player}"))
             {
-                dir += Vector3.left;
-            }
-
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                dir += Vector3.right;
-            }
-
-            if (dir != Vector3.zero)
-            {
-                transform.position += dir.normalized * movementSpeed * Time.deltaTime;
-                dir = Vector3.zero;
+                
             }
         }
-    }
-
-    private void FixedUpdate()//todo put into better function
-    {
-        
-        if(this.remoteControl)
+        if (this.remoteControl)
         {
             this.moduleController.moving = true;
         }
