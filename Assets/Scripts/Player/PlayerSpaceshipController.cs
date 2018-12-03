@@ -7,13 +7,26 @@ public class PlayerSpaceshipController : MonoBehaviour
 
     public string Player;
 
-    private float rotationSpeed = 5.0f;
-    private float translationSpeed = 0.1f;
-    private float AccelerationForce = 20f;
-    private float BrakeForce = 0.95f;
-    private float SlowBrakeForce = 0.98f;
-    private float BrakeThreshold = 0.7f;
-    private float TurnModifier = 10;
+    [Range(1.0f, 10.0f)]
+    public float rotationSpeed = 5.0f;
+
+    [Range(0.1f, 5.0f)]
+    public float translationSpeed = 0.1f;
+
+    [Range(1.0f, 20.0f)]
+    public float AccelerationForce = 10.0f;
+
+    [Range(0.1f, 5.0f)]
+    public float BrakeForce = 0.95f;
+
+    [Range(0.1f, 5.0f)]
+    public float SlowBrakeForce = 0.98f;
+
+    [Range(0.1f, 5.0f)]
+    public float BrakeThreshold = 0.7f;
+
+    [Range(1.0f, 20.0f)]
+    public float TurnModifier = 10.0f;
 
     private Rigidbody2D rb;
 
@@ -31,7 +44,8 @@ public class PlayerSpaceshipController : MonoBehaviour
         }
     }
 
-    void FixedUpdate () {
+    void FixedUpdate ()
+    {
 	    if (Input.GetAxis($"Horizontal_{Player}") != 0)
 	    {
 	        Turn();
@@ -64,7 +78,7 @@ public class PlayerSpaceshipController : MonoBehaviour
     private void Accelerate()
     {
         //Debug.Log("Accelerate");
-        rb.AddRelativeForce(new Vector2(0, AccelerationForce), ForceMode2D.Force);
+        rb.AddRelativeForce(new Vector2(0, 1) * AccelerationForce, ForceMode2D.Force);
     }
 
     private void Brake(float brakeForce)
