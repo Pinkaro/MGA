@@ -4,26 +4,53 @@ using UnityEngine;
 
 public abstract class ModuleController : MonoBehaviour
 {
-    public bool moving;
-
-    protected Vector3 dir;
+    public string Player;
 
     protected float movementSpeed = 1.0f;
-
-    // Use this for initialization
-    void Start () {
-		
-	}
+    
 	
 	// Update is called once per frame
 	void Update () {
-	    if (this.moving)
+	    if (!string.IsNullOrWhiteSpace(Player))
 	    {
-	        this.Move();
-        }
+	        if (Input.GetAxis($"Vertical_{Player}") != 0)
+	        {
+	            Vertical(Input.GetAxis($"Vertical_{Player}"));
+	        }
+
+	        if (Input.GetAxis($"Horizontal_{Player}") != 0)
+	        {
+	            Horizontal(Input.GetAxis($"Horizontal_{Player}"));
+	        }
+
+	        if (Input.GetAxis($"Accelerate_{Player}") > 0)
+	        {
+	            Accelerate(Input.GetAxis($"Accelerate_{Player}"));
+	        }
+
+	        if (Input.GetAxis($"Fire1_{Player}") > 0)
+	        {
+                Fire1();
+	        }
+	    }
+	}
+    protected virtual void Vertical(float input)
+    {
+
     }
 
-    protected abstract void Move();
+    protected virtual void Horizontal(float input)
+    {
 
-    protected abstract void Action();
+    }
+
+    protected virtual void Accelerate(float input)
+    {
+        
+    }
+
+    protected virtual void Fire1()
+    {
+        
+    }
 }

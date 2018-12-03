@@ -6,6 +6,7 @@ public class PlayerSpaceshipController : MonoBehaviour
 {
 
     public string Player;
+    public Shootable shootable;
 
     [Range(1.0f, 10.0f)]
     public float rotationSpeed = 5.0f;
@@ -30,6 +31,7 @@ public class PlayerSpaceshipController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        shootable = GetComponent<Shootable>();
 
         string[] controllers = Input.GetJoystickNames();
 
@@ -61,6 +63,14 @@ public class PlayerSpaceshipController : MonoBehaviour
 	    {
 	        Brake(BrakeForce);
 	    }
+    }
+
+    void Update()
+    {
+        if ((Input.GetAxis($"Fire1_{Player}") > 0))
+        {
+            shootable.Shoot();
+        }
     }
 
     private void Turn()

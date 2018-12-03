@@ -12,9 +12,7 @@ public class PlayerInDiscController : MonoBehaviour
 
     private Vector3 dir;
 
-    private bool remoteControl;
-
-    private GameObject module;
+    public bool remoteControl;
 
     private ModuleController moduleController;
 
@@ -24,28 +22,27 @@ public class PlayerInDiscController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public bool RegisterModule(GameObject module)
+    public bool RegisterModule(ModuleController module)
     {
         this.remoteControl = true;
-        this.module = module;
-        this.moduleController = this.module.GetComponent<ModuleController>();
-        if (this.moduleController != null)
+        if (module != null)
         {
+            module.Player = Player;
+            moduleController = module;
             return true;
         }
         this.remoteControl = false;
-        this.module = null;
         return false;
     }
 
     public void clearModule()
     {
-        this.remoteControl = false;
-        if (this.moduleController != null)
+        if (moduleController != null)
         {
-            this.moduleController.moving = false;
+            moduleController.Player = string.Empty;
         }
-        this.module = null;
+
+        this.remoteControl = false;
         this.moduleController = null;
     }
 
@@ -56,26 +53,24 @@ public class PlayerInDiscController : MonoBehaviour
         {
             rb.velocity = 
                 MovementSpeed * new Vector2(Input.GetAxis($"Horizontal_{Player}"), -Input.GetAxis($"Vertical_{Player}")).normalized;
-
-
+            
             if (Input.GetAxis($"Accelerate_{Player}") > 0)
             {
                 
             }
 
-            if (Input.GetButton($"Brake_{Player}"))
+            if (Input.GetAxis($"Fire1_{Player}") > 0)
             {
-                
-            }
 
-            if (Input.GetButton($"Fire1_{Player}"))
-            {
-                
             }
         }
-        if (this.remoteControl)
+        else
         {
-            this.moduleController.moving = true;
+            rb.velocity = Vector2.zero;
+        }
+        if (Input.GetButton($"Brake_{Player}"))
+        {
+            clearModule();
         }
     }
 }
