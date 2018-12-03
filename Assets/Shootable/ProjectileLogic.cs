@@ -17,7 +17,7 @@ public class ProjectileLogic : MonoBehaviour
 	    Rigidbody2D rigidBodyAmmunition = GetComponent<Rigidbody2D>();
 	    rigidBodyAmmunition.AddForce(travelDirection * speed);
 
-	    Vector3 screenPoint = Camera.main.WorldToViewportPoint(transform.position);
+        Vector3 screenPoint = Camera.main.WorldToViewportPoint(transform.position);
 	    bool onScreen = screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1;
 
 	    if (!onScreen)
@@ -32,20 +32,28 @@ public class ProjectileLogic : MonoBehaviour
         this.damage = damage;
         this.speed = speed;
 
-        AvoidCollision("Ammunition");
+        AvoidCollisionByTag("Ammunition");
     }
 
-    private void AvoidCollision(string tag)
+    private void AvoidCollisionByTag(string tag)
     {
-        CircleCollider2D collider = GetComponent<CircleCollider2D>();
+        Collider2D collider = GetComponent<Collider2D>();
         var objects = GameObject.FindGameObjectsWithTag(tag);
 
         foreach (var o in objects)
         {
-            CircleCollider2D otherCollider = o.GetComponent<CircleCollider2D>();
+            Collider2D otherCollider = o.GetComponent<Collider2D>();
 
             Physics2D.IgnoreCollision(collider, otherCollider);
         }
+    }
+
+    public void AvoidCollisionByGameObject(GameObject gameObject)
+    {
+        Collider2D collider = GetComponent<Collider2D>();
+        Collider2D otherCollider = gameObject.GetComponent<Collider2D>();
+
+        Physics2D.IgnoreCollision(collider, otherCollider);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
