@@ -65,6 +65,7 @@ namespace Assets.Scripts.Player
                 Transform PlayerWrapper = Disc.transform.Find("Players");
                 GameObject TESTDISCPLAYER = Instantiate(PlayerInDiscBlueprint, PlayerWrapper);
                 TESTDISCPLAYER.GetComponent<PlayerInDiscController>().PlayerId = currentPlayerId;
+                TESTDISCPLAYER.transform.localScale = new Vector3(0.1f, 0.1f, 1);
             }
         }
 

@@ -45,7 +45,7 @@ public class Shootable : MonoBehaviour
         if(projectileLogic == null) Debug.LogError("Ammunition does not have ProjectileLogic component.");
 	}
 
-    public void Shoot()
+    public void Shoot(float projectileSize = 5)
     {
         if (Time.time > timeToFire)
         {
@@ -54,6 +54,7 @@ public class Shootable : MonoBehaviour
                 timeToFire = Time.time + 1 / Firerate;
             }
             GameObject ammu = Instantiate(Ammunition, firePoint.position, firePoint.rotation);
+            ammu.transform.localScale = new Vector3(projectileSize,projectileSize,1);
             ProjectileLogic ammuLogic = ammu.GetComponent<ProjectileLogic>();
             ammuLogic.AvoidCollisionByGameObject(gameObject);
 
