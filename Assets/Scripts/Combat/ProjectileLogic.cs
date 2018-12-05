@@ -7,8 +7,6 @@ public class ProjectileLogic : MonoBehaviour
 
     public string[] TagsIgnoreCollision;
 
-    public AudioClip FireSoundEffect;
-
     private Vector3 travelDirection;
 
     private float damage;
@@ -42,7 +40,6 @@ public class ProjectileLogic : MonoBehaviour
         }
 
         AudioSource ammuAudio = GetComponent<AudioSource>();
-        ammuAudio.clip = FireSoundEffect;
         ammuAudio.Play();
     }
 
