@@ -2,9 +2,10 @@
 
 public class TouretteShootingModule : ModuleController
 {
+    public Shootable shootable;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -13,9 +14,9 @@ public class TouretteShootingModule : ModuleController
 		
 	}
 
-    protected override void Fire1()
+    protected override void Fire1Press()
     {
         Debug.Log("[TouretteModule] Shoot");
-        transformToRotate.RotateAround(rotateAround.position, Vector3.forward, -input * rotationSpeed);
+        shootable.Shoot();
     }
 }
