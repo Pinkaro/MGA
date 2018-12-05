@@ -14,6 +14,11 @@ namespace Assets.Scripts.Player
         public GameObject PlayerBlueprint;
 
 
+        // ############### TESTING #############
+        public GameObject Disc;
+        public GameObject PlayerInDiscBlueprint;
+        // ######################################
+
         private Vector3[] spawnpoints = new Vector3[4];
         private Vector3 spawnpoint1;
         private Vector3 spawnpoint2;
@@ -53,6 +58,13 @@ namespace Assets.Scripts.Player
                 currentPlayer.transform.up = cameraMiddle - spawnpoints[i - 1];
 
                 currentPlayer.GetComponent<PlayerSpaceshipController>().PlayerId = currentPlayerId;
+
+                // #######################################################################
+                // ######### ALSO SPAWNS PLAYERS IN DISC FOR NOW, DELETE AFTERWARDS
+                // #######################################################################
+                Transform PlayerWrapper = Disc.transform.Find("Players");
+                GameObject TESTDISCPLAYER = Instantiate(PlayerInDiscBlueprint, PlayerWrapper);
+                TESTDISCPLAYER.GetComponent<PlayerInDiscController>().PlayerId = currentPlayerId;
             }
         }
 

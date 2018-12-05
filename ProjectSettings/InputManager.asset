@@ -35,7 +35,7 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
-    axis: 0
+    axis: 1
     joyNum: 1
   - serializedVersion: 3
     m_Name: Horizontal_P2_XBOX360
@@ -67,7 +67,7 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
-    axis: 0
+    axis: 1
     joyNum: 2
   - serializedVersion: 3
     m_Name: Vertical_P1_XBOX360
@@ -99,7 +99,7 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
-    axis: 1
+    axis: 0
     joyNum: 1
   - serializedVersion: 3
     m_Name: Vertical_P2_XBOX360
@@ -131,7 +131,7 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
-    axis: 1
+    axis: 0
     joyNum: 2
   - serializedVersion: 3
     m_Name: Fire1_P1_XBOX360
