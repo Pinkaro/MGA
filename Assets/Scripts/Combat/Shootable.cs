@@ -55,6 +55,7 @@ public class Shootable : MonoBehaviour
             }
             GameObject ammu = Instantiate(Ammunition, firePoint.position, firePoint.rotation);
             ammu.transform.localScale = new Vector3(projectileSize,projectileSize,1);
+            ammu.transform.Rotate(new Vector3(0,0,-90));
             ProjectileLogic ammuLogic = ammu.GetComponent<ProjectileLogic>();
             ammuLogic.AvoidCollisionByGameObject(gameObject);
 
