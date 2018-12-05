@@ -2,7 +2,7 @@
 
 public class TouretteShootingModule : ModuleController
 {
-
+    /*
 	// Use this for initialization
 	void Start () {
 		
@@ -18,4 +18,5 @@ public class TouretteShootingModule : ModuleController
         Debug.Log("[TouretteModule] Shoot");
         transformToRotate.RotateAround(rotateAround.position, Vector3.forward, -input * rotationSpeed);
     }
+    */
 }

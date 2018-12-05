@@ -10,7 +10,7 @@ public class GameInit : MonoBehaviour
 	{
 	    PlayerGenerator playerGenerator = GetComponent<PlayerGenerator>();
         playerGenerator.LogControllerInfo();
-        playerGenerator.GeneratePlayers();
+        //playerGenerator.GeneratePlayers();
 
 
 	}
