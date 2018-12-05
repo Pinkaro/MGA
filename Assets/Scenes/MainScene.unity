@@ -304,6 +304,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114230926057632434, guid: 82b2d843df386dd46a4a9dc2de747784,
+        type: 2}
+      propertyPath: Ammunition
+      value: 
+      objectReference: {fileID: 1376197670016558, guid: cc392f853d500c449988222bbda294a3,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82b2d843df386dd46a4a9dc2de747784, type: 2}
   m_IsPrefabAsset: 0
