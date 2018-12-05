@@ -51,39 +51,34 @@ namespace Assets.Scripts.Player
             string currentPlayerId = string.Empty;
             GameObject currentPlayer = null;
 
-            for (int i = 1; i <= controllerNames.Length; i++)
+            int spawnedPlayers = 0;
+
+            for (int i = 0; i < controllerNames.Length; i++)
             {
-                currentPlayerId = GeneratePlayerId(controllerNames[i - 1], i);
-                currentPlayer = Instantiate(PlayerBlueprint, spawnpoints[i - 1], Quaternion.identity);
-                currentPlayer.transform.up = cameraMiddle - spawnpoints[i - 1];
+                if (string.IsNullOrEmpty(controllerNames[i]))
+                    continue;
+
+                currentPlayerId = GeneratePlayerId(i + 1); // so we map it to the correct joyNum in InputManager
+                currentPlayer = Instantiate(PlayerBlueprint, spawnpoints[spawnedPlayers], Quaternion.identity);
+                currentPlayer.transform.up = cameraMiddle - spawnpoints[spawnedPlayers];
 
                 currentPlayer.GetComponent<PlayerSpaceshipController>().PlayerId = currentPlayerId;
 
                 // #######################################################################
                 // ######### ALSO SPAWNS PLAYERS IN DISC FOR NOW, DELETE AFTERWARDS
                 // #######################################################################
-                Transform PlayerWrapper = Disc.transform.Find("Players");
-                GameObject TESTDISCPLAYER = Instantiate(PlayerInDiscBlueprint, PlayerWrapper);
-                TESTDISCPLAYER.GetComponent<PlayerInDiscController>().PlayerId = currentPlayerId;
+                //Transform PlayerWrapper = Disc.transform.Find("Players");
+                //GameObject TESTDISCPLAYER = Instantiate(PlayerInDiscBlueprint, PlayerWrapper);
+                //TESTDISCPLAYER.GetComponent<PlayerInDiscController>().PlayerId = currentPlayerId;
+                // #######################################################################
+
+                spawnedPlayers++;
             }
         }
 
-        private string GeneratePlayerId(string controllerName, int playerId)
+        private string GeneratePlayerId(int controllerId)
         {
-            string currentPlayerId = string.Empty;
-
-            if (controllerName.Contains("PLAYSTATION(R)3"))
-            {
-                currentPlayerId = "P" + playerId + "_PS3";
-                return currentPlayerId;
-            }
-            else if (controllerName.Contains("XBOX 360"))
-            {
-                currentPlayerId = "P" + playerId + "_XBOX360";
-                return currentPlayerId;
-            }
-
-            return null;
+            return "Joy" + controllerId;
         }
 
         private void InitSpawnpoints()

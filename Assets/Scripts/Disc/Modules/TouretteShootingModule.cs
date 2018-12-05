@@ -13,9 +13,9 @@ public class TouretteShootingModule : ModuleController
 		
 	}
 
-    protected override void Fire1()
-    {
-        Debug.Log("[TouretteModule] Shoot");
-        transformToRotate.RotateAround(rotateAround.position, Vector3.forward, -input * rotationSpeed);
-    }
+    //protected override void Fire1()
+    //{
+    //    Debug.Log("[TouretteModule] Shoot");
+    //    //transformToRotate.RotateAround(rotateAround.position, Vector3.forward, -input * rotationSpeed);
+    //}
 }

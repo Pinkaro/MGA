@@ -37,9 +37,9 @@ public class TurretModule : ModuleController
         }
     }
 
-    protected override void Fire1()
-    {
-        Debug.Log("[TurretModule] Shoot");
-        shootable.Shoot();
-    }
+    //protected override void Fire1()
+    //{
+    //    Debug.Log("[TurretModule] Shoot");
+    //    shootable.Shoot();
+    //}
 }
