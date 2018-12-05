@@ -6,7 +6,7 @@ InputManager:
   serializedVersion: 2
   m_Axes:
   - serializedVersion: 3
-    m_Name: Horizontal_P1_XBOX360
+    m_Name: Horizontal_Joy1
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: left
@@ -22,7 +22,7 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: Horizontal_P1_PS3
+    m_Name: Horizontal_Joy2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: left
@@ -35,10 +35,10 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
-    axis: 1
-    joyNum: 1
+    axis: 0
+    joyNum: 2
   - serializedVersion: 3
-    m_Name: Horizontal_P2_XBOX360
+    m_Name: Horizontal_Joy3
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: left
@@ -46,15 +46,15 @@ InputManager:
     altNegativeButton: a
     altPositiveButton: d
     gravity: 3
-    dead: 0.001
+    dead: 0.4
     sensitivity: 3
     snap: 1
     invert: 0
     type: 2
     axis: 0
-    joyNum: 2
+    joyNum: 3
   - serializedVersion: 3
-    m_Name: Horizontal_P2_PS3
+    m_Name: Horizontal_Joy4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: left
@@ -62,15 +62,47 @@ InputManager:
     altNegativeButton: a
     altPositiveButton: d
     gravity: 3
-    dead: 0.001
+    dead: 0.4
     sensitivity: 3
     snap: 1
     invert: 0
     type: 2
-    axis: 1
-    joyNum: 2
+    axis: 0
+    joyNum: 4
   - serializedVersion: 3
-    m_Name: Vertical_P1_XBOX360
+    m_Name: Horizontal_Joy5
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: left
+    positiveButton: right
+    altNegativeButton: a
+    altPositiveButton: d
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 0
+    joyNum: 5
+  - serializedVersion: 3
+    m_Name: Horizontal_Joy6
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: left
+    positiveButton: right
+    altNegativeButton: a
+    altPositiveButton: d
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 0
+    joyNum: 6
+  - serializedVersion: 3
+    m_Name: Vertical_Joy1
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: down
@@ -86,7 +118,7 @@ InputManager:
     axis: 1
     joyNum: 1
   - serializedVersion: 3
-    m_Name: Vertical_P1_PS3
+    m_Name: Vertical_Joy2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: down
@@ -99,10 +131,10 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
-    axis: 0
-    joyNum: 1
+    axis: 1
+    joyNum: 2
   - serializedVersion: 3
-    m_Name: Vertical_P2_XBOX360
+    m_Name: Vertical_Joy3
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: down
@@ -110,15 +142,15 @@ InputManager:
     altNegativeButton: s
     altPositiveButton: w
     gravity: 3
-    dead: 0.001
+    dead: 0.4
     sensitivity: 3
     snap: 1
     invert: 0
     type: 2
     axis: 1
-    joyNum: 2
+    joyNum: 3
   - serializedVersion: 3
-    m_Name: Vertical_P2_PS3
+    m_Name: Vertical_Joy4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: down
@@ -126,15 +158,47 @@ InputManager:
     altNegativeButton: s
     altPositiveButton: w
     gravity: 3
-    dead: 0.001
+    dead: 0.4
     sensitivity: 3
     snap: 1
     invert: 0
     type: 2
-    axis: 0
-    joyNum: 2
+    axis: 1
+    joyNum: 4
   - serializedVersion: 3
-    m_Name: Fire1_P1_XBOX360
+    m_Name: Vertical_Joy5
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: down
+    positiveButton: up
+    altNegativeButton: s
+    altPositiveButton: w
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 1
+    joyNum: 5
+  - serializedVersion: 3
+    m_Name: Vertical_Joy6
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: down
+    positiveButton: up
+    altNegativeButton: s
+    altPositiveButton: w
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 1
+    joyNum: 6
+  - serializedVersion: 3
+    m_Name: Fire1_Joy1
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -150,23 +214,7 @@ InputManager:
     axis: 9
     joyNum: 1
   - serializedVersion: 3
-    m_Name: Fire1_P1_PS3
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: 
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 1000
-    dead: 0.001
-    sensitivity: 1000
-    snap: 0
-    invert: 0
-    type: 2
-    axis: 9
-    joyNum: 1
-  - serializedVersion: 3
-    m_Name: Fire1_P2_XBOX360
+    m_Name: Fire1_Joy2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -182,7 +230,7 @@ InputManager:
     axis: 9
     joyNum: 2
   - serializedVersion: 3
-    m_Name: Fire1_P2_PS3
+    m_Name: Fire1_Joy3
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -196,9 +244,89 @@ InputManager:
     invert: 0
     type: 2
     axis: 9
+    joyNum: 3
+  - serializedVersion: 3
+    m_Name: Fire1_Joy4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 9
+    joyNum: 4
+  - serializedVersion: 3
+    m_Name: Fire1_Joy5
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 9
+    joyNum: 5
+  - serializedVersion: 3
+    m_Name: Fire1_Joy6
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 9
+    joyNum: 6
+  - serializedVersion: 3
+    m_Name: Accelerate_Joy1
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 8
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: Accelerate_Joy2
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 8
     joyNum: 2
   - serializedVersion: 3
-    m_Name: Accelerate_P1_XBOX360
+    m_Name: Accelerate_Joy3
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -212,12 +340,76 @@ InputManager:
     invert: 0
     type: 2
     axis: 8
+    joyNum: 3
+  - serializedVersion: 3
+    m_Name: Accelerate_Joy4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 8
+    joyNum: 4
+  - serializedVersion: 3
+    m_Name: Accelerate_Joy5
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 8
+    joyNum: 5
+  - serializedVersion: 3
+    m_Name: Accelerate_Joy6
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 8
+    joyNum: 6
+  - serializedVersion: 3
+    m_Name: Brake_Joy1
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: joystick button 4
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: Accelerate_P1_PS3
+    m_Name: Brake_Joy2
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
+    negativeButton: joystick button 4
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -227,42 +419,10 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 8
-    joyNum: 1
-  - serializedVersion: 3
-    m_Name: Accelerate_P2_XBOX360
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: 
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 1000
-    dead: 0.001
-    sensitivity: 1000
-    snap: 0
-    invert: 0
-    type: 2
-    axis: 8
+    axis: 0
     joyNum: 2
   - serializedVersion: 3
-    m_Name: Accelerate_P2_PS3
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: 
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 1000
-    dead: 0.001
-    sensitivity: 1000
-    snap: 0
-    invert: 0
-    type: 2
-    axis: 8
-    joyNum: 2
-  - serializedVersion: 3
-    m_Name: Brake_P1_XBOX360
+    m_Name: Brake_Joy3
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: joystick button 4
@@ -276,9 +436,9 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 1
+    joyNum: 3
   - serializedVersion: 3
-    m_Name: Brake_P1_PS3
+    m_Name: Brake_Joy4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: joystick button 4
@@ -292,9 +452,9 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 1
+    joyNum: 4
   - serializedVersion: 3
-    m_Name: Brake_P2_XBOX360
+    m_Name: Brake_Joy5
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: joystick button 4
@@ -308,9 +468,9 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 1
+    joyNum: 5
   - serializedVersion: 3
-    m_Name: Brake_P2_PS3
+    m_Name: Brake_Joy6
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: joystick button 4
@@ -324,4 +484,4 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 1
+    joyNum: 6
