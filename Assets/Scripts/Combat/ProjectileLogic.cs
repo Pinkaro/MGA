@@ -7,6 +7,8 @@ public class ProjectileLogic : MonoBehaviour
 
     public string[] TagsIgnoreCollision;
 
+    public AudioClip FireSoundEffect;
+
     private Vector3 travelDirection;
 
     private float damage;
@@ -37,7 +39,11 @@ public class ProjectileLogic : MonoBehaviour
         foreach (string tag in TagsIgnoreCollision)
         {
             AvoidCollisionByTag(tag);
-        }      
+        }
+
+        AudioSource ammuAudio = GetComponent<AudioSource>();
+        ammuAudio.clip = FireSoundEffect;
+        ammuAudio.Play();
     }
 
     private void AvoidCollisionByTag(string tag)
