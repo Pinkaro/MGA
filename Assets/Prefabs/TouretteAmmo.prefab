@@ -131,6 +131,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7248684a08ec402428161f84476b2cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TagsIgnoreCollision:
+  - Ammunition
+  - Disc
+  - Terminal
+  - Team
 --- !u!114 &114868553283454816
 MonoBehaviour:
   m_ObjectHideFlags: 1

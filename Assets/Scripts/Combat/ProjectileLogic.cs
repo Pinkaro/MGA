@@ -5,6 +5,8 @@ using UnityEngine;
 public class ProjectileLogic : MonoBehaviour
 {
 
+    public string[] TagsIgnoreCollision;
+
     private Vector3 travelDirection;
 
     private float damage;
@@ -32,7 +34,10 @@ public class ProjectileLogic : MonoBehaviour
         this.damage = damage;
         this.speed = speed;
 
-        AvoidCollisionByTag("Ammunition");
+        foreach (string tag in TagsIgnoreCollision)
+        {
+            AvoidCollisionByTag(tag);
+        }      
     }
 
     private void AvoidCollisionByTag(string tag)
