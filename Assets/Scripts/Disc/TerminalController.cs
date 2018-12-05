@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class TerminalController : MonoBehaviour
 {
+    
 
-    public GameObject Module;
-
-    private ModuleController moduleController;
+    public ModuleController moduleController;
     
     private GameObject player;
 
@@ -18,10 +17,6 @@ public class TerminalController : MonoBehaviour
     // Use this for initialization
     void Start ()
 	{
-	    if (this.Module != null)
-	    {
-	        this.moduleController = this.Module.GetComponent<ModuleController>();
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
