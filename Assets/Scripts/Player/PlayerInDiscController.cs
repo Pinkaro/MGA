@@ -10,7 +10,7 @@ public class PlayerInDiscController : MonoBehaviour
     private Rigidbody2D rb;
 
     [Range(1.0f, 20.0f)]
-    public float MovementSpeed = 1.0f;
+    public float MovementSpeed = 5.0f;
 
     private Vector3 dir;
 

@@ -7,10 +7,7 @@ public abstract class ModuleController : MonoBehaviour
     public string Player;
 
     protected float movementSpeed = 1.0f;
-
-    private bool isFirePressed = false;
     
-	
 	// Update is called once per frame
 	void Update () {
 	    if (!string.IsNullOrWhiteSpace(Player))
@@ -30,16 +27,14 @@ public abstract class ModuleController : MonoBehaviour
 	            Accelerate(Input.GetAxis($"Accelerate_{Player}"));
 	        }
 
-	        if (Input.GetAxis($"Fire1_{Player}") > 0 && !isFirePressed)
+	        if (Input.GetAxis($"Fire1_{Player}") > 0)
 	        {
-	            isFirePressed = true;
-                Fire1();
+                Fire1Press();
 	        }
 
-	        if (Input.GetAxis($"Fire1_{Player}") == 0 && isFirePressed)
+	        if (Input.GetAxis($"Fire1_{Player}") == 0)
 	        {
-	            isFirePressed = false;
-                Fire1();
+                Fire1Release();
 	        }
 	    }
 	}
@@ -58,8 +53,12 @@ public abstract class ModuleController : MonoBehaviour
         
     }
 
-    protected virtual void Fire1(bool released = false)
+    protected virtual void Fire1Press()
     {
         
+    }
+    protected virtual void Fire1Release()
+    {
+
     }
 }
