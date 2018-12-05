@@ -58,6 +58,9 @@ namespace Assets.Scripts.Player
                 if (string.IsNullOrEmpty(controllerNames[i]))
                     continue;
 
+                if (spawnedPlayers > 4)
+                    break;
+
                 currentPlayerId = GeneratePlayerId(i + 1); // so we map it to the correct joyNum in InputManager
                 currentPlayer = Instantiate(PlayerBlueprint, spawnpoints[spawnedPlayers], Quaternion.identity);
                 currentPlayer.transform.up = cameraMiddle - spawnpoints[spawnedPlayers];
@@ -67,9 +70,10 @@ namespace Assets.Scripts.Player
                 // #######################################################################
                 // ######### ALSO SPAWNS PLAYERS IN DISC FOR NOW, DELETE AFTERWARDS
                 // #######################################################################
-                //Transform PlayerWrapper = Disc.transform.Find("Players");
-                //GameObject TESTDISCPLAYER = Instantiate(PlayerInDiscBlueprint, PlayerWrapper);
-                //TESTDISCPLAYER.GetComponent<PlayerInDiscController>().PlayerId = currentPlayerId;
+                Transform PlayerWrapper = Disc.transform.Find("Players");
+                GameObject TESTDISCPLAYER = Instantiate(PlayerInDiscBlueprint, PlayerWrapper);
+                TESTDISCPLAYER.transform.localScale -= new Vector3(0.9f, 0.9f, 0.0f);
+                TESTDISCPLAYER.GetComponent<PlayerInDiscController>().PlayerId = currentPlayerId;
                 // #######################################################################
 
                 spawnedPlayers++;
@@ -107,18 +111,6 @@ namespace Assets.Scripts.Player
 
             spawnpoints[3] = mainCam.ScreenToWorldPoint(topRight);
             spawnpoints[3].z = 0.0f;
-
-            //GameObject 
-            //player1.transform.up = cameraMiddle - spawnpoint1;
-
-            //GameObject player2 = Instantiate(PlayerBlueprint, spawnpoint2, Quaternion.identity);
-            //player2.transform.up = cameraMiddle - spawnpoint2;
-
-            //GameObject player3 = Instantiate(PlayerBlueprint, spawnpoint3, Quaternion.identity);
-            //player3.transform.up = cameraMiddle - spawnpoint3;
-
-            //GameObject player4 = Instantiate(PlayerBlueprint, spawnpoint4, Quaternion.identity);
-            //player4.transform.up = cameraMiddle - spawnpoint4;
         }
     }
 }
