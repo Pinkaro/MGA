@@ -130,7 +130,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 128b88300fa84534290841384d2df2d8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -232,7 +232,6 @@ MonoBehaviour:
   - Disc
   - Terminal
   - Team
-  FireSoundEffect: {fileID: 8300000, guid: 128b88300fa84534290841384d2df2d8, type: 3}
 --- !u!114 &114868553283454816
 MonoBehaviour:
   m_ObjectHideFlags: 1
