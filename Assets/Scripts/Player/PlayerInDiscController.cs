@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerInDiscController : MonoBehaviour
 {
-    public string Player;
+    [HideInInspector]
+    public string PlayerId;
 
     private Rigidbody2D rb;
+
     [Range(1.0f, 20.0f)]
     public float MovementSpeed = 1.0f;
 
@@ -27,7 +29,7 @@ public class PlayerInDiscController : MonoBehaviour
         this.remoteControl = true;
         if (module != null)
         {
-            module.Player = Player;
+            module.Player = PlayerId;
             moduleController = module;
             return true;
         }
@@ -52,14 +54,14 @@ public class PlayerInDiscController : MonoBehaviour
         if (!this.remoteControl)
         {
             rb.velocity = 
-                MovementSpeed * new Vector2(Input.GetAxis($"Horizontal_{Player}"), -Input.GetAxis($"Vertical_{Player}")).normalized;
+                MovementSpeed * new Vector2(Input.GetAxis($"Horizontal_{PlayerId}"), -Input.GetAxis($"Vertical_{PlayerId}")).normalized;
             
-            if (Input.GetAxis($"Accelerate_{Player}") > 0)
+            if (Input.GetAxis($"Accelerate_{PlayerId}") > 0)
             {
                 
             }
 
-            if (Input.GetAxis($"Fire1_{Player}") > 0)
+            if (Input.GetAxis($"Fire1_{PlayerId}") > 0)
             {
 
             }
@@ -68,7 +70,7 @@ public class PlayerInDiscController : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
         }
-        if (Input.GetButton($"Brake_{Player}"))
+        if (Input.GetButton($"Brake_{PlayerId}"))
         {
             clearModule();
         }
