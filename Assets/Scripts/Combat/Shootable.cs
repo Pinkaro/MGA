@@ -35,7 +35,7 @@ public class Shootable : MonoBehaviour
 	    if (shipController != null)
 	    {
 	        Speed += shipController.AccelerationForce;
-	        playerId = shipController.Player;
+	        playerId = shipController.PlayerId;
         }
 	    
 	    

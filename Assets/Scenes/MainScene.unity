@@ -455,6 +455,26 @@ MonoBehaviour:
   Spread: 0
   Damage: 10
   Speed: 3.6
+--- !u!1 &834645372 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1965703795354476, guid: 47417b3d47cb2ba4b915ee8246e06926,
+    type: 2}
+  m_PrefabInternal: {fileID: 454326500}
+--- !u!114 &834645373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 834645372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775428c7b34bbf54ab75376db2665f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WidthDivisor: 8
+  HeightDivisor: 6
+  PlayerBlueprint: {fileID: 1615950422909208, guid: 0991a2915a8f23c4ba90e8f6b6f9fa21,
+    type: 2}
 --- !u!1 &1302952102
 GameObject:
   m_ObjectHideFlags: 0

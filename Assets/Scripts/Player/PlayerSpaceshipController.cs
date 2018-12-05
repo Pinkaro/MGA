@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerSpaceshipController : MonoBehaviour
 {
+    [HideInInspector]
+    public string PlayerId;
 
-    public string Player;
     public Shootable shootable;
 
     [Range(1.0f, 10.0f)]
@@ -32,34 +33,25 @@ public class PlayerSpaceshipController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         shootable = GetComponent<Shootable>();
-
-        string[] controllers = Input.GetJoystickNames();
-
-        Debug.Log($"Controllers detected: {controllers.Length}");
-
-        foreach (string controller in controllers)
-        {
-            Debug.Log(controller);
-        }
     }
 
     void FixedUpdate ()
     {
-	    if (Input.GetAxis($"Horizontal_{Player}") != 0)
+	    if (Input.GetAxis($"Horizontal_{PlayerId}") != 0)
 	    {
 	        Turn();
 	    }
 
-	    if (Input.GetAxis($"Accelerate_{Player}") > 0)
+	    if (Input.GetAxis($"Accelerate_{PlayerId}") > 0)
 	    {
-	        Accelerate(Input.GetAxisRaw($"Accelerate_{Player}"));
+	        Accelerate(Input.GetAxisRaw($"Accelerate_{PlayerId}"));
         }
 	    else
 	    {
 	        Brake(SlowBrakeForce);
 	    }
 
-	    if (Input.GetButton($"Brake_{Player}"))
+	    if (Input.GetButton($"Brake_{PlayerId}"))
 	    {
 	        Brake(BrakeForce);
 	    }
@@ -67,7 +59,7 @@ public class PlayerSpaceshipController : MonoBehaviour
 
     void Update()
     {
-        if ((Input.GetAxis($"Fire1_{Player}") > 0))
+        if ((Input.GetAxis($"Fire1_{PlayerId}") > 0))
         {
             shootable.Shoot();
         }
@@ -75,7 +67,7 @@ public class PlayerSpaceshipController : MonoBehaviour
 
     private void Turn()
     {
-        var rotation = rotationSpeed * -Input.GetAxisRaw($"Horizontal_{Player}");
+        var rotation = rotationSpeed * -Input.GetAxisRaw($"Horizontal_{PlayerId}");
         var magnitude = rb.velocity.magnitude/TurnModifier;
         var speed = magnitude >= 1 ? magnitude : 1;
         rotation /= speed;
