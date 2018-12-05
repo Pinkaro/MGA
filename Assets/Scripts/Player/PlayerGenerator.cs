@@ -13,18 +13,13 @@ namespace Assets.Scripts.Player
         public int HeightDivisor = 6;
         public GameObject PlayerBlueprint;
 
-
         // ############### TESTING #############
         public GameObject Disc;
         public GameObject PlayerInDiscBlueprint;
         // ######################################
 
         private Vector3[] spawnpoints = new Vector3[4];
-        private Vector3 spawnpoint1;
-        private Vector3 spawnpoint2;
-        private Vector3 spawnpoint3;
-        private Vector3 spawnpoint4;
-
+        private Color[] playerColors = new Color[4];
         private Vector3 cameraMiddle;
 
         private string[] controllerNames;
@@ -33,6 +28,11 @@ namespace Assets.Scripts.Player
         {
             controllerNames = Input.GetJoystickNames();
             InitSpawnpoints();
+
+            playerColors[0] = Color.red;
+            playerColors[1] = Color.blue;
+            playerColors[2] = Color.green;
+            playerColors[3] = Color.yellow;
         }
 
 
@@ -64,7 +64,7 @@ namespace Assets.Scripts.Player
                 currentPlayerId = GeneratePlayerId(i + 1); // so we map it to the correct joyNum in InputManager
                 currentPlayer = Instantiate(PlayerBlueprint, spawnpoints[spawnedPlayers], Quaternion.identity);
                 currentPlayer.transform.up = cameraMiddle - spawnpoints[spawnedPlayers];
-
+                currentPlayer.GetComponent<SpriteRenderer>().color = playerColors[spawnedPlayers];
                 currentPlayer.GetComponent<PlayerSpaceshipController>().PlayerId = currentPlayerId;
 
                 // #######################################################################
@@ -74,6 +74,7 @@ namespace Assets.Scripts.Player
                 GameObject TESTDISCPLAYER = Instantiate(PlayerInDiscBlueprint, PlayerWrapper);
                 TESTDISCPLAYER.transform.localScale -= new Vector3(0.9f, 0.9f, 0.0f);
                 TESTDISCPLAYER.GetComponent<PlayerInDiscController>().PlayerId = currentPlayerId;
+                TESTDISCPLAYER.GetComponent<SpriteRenderer>().color = playerColors[spawnedPlayers];
                 // #######################################################################
 
                 spawnedPlayers++;
