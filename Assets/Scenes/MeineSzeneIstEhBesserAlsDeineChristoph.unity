@@ -9704,13 +9704,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1376342494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2fe35b865a36c74ea6d58ed62daa532, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c37757a1ea07114f9b10a845c6788d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-=======
-  Player: 
->>>>>>> 8e0ed5c8504384cb8da328f2be350eff8677f32d
 --- !u!1 &1401624237 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1104415804828862, guid: af644f5abe2a507468aebdc8ea3cd88b,
@@ -9727,7 +9723,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58254754a6d07664e9347d1e9cd5d2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   movementSpeed: 1
 --- !u!1 &1438957314
 GameObject:
@@ -18969,11 +18964,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
-=======
-  Player: P1
-  MovementSpeed: 3
-  remoteControl: 0
->>>>>>> 8e0ed5c8504384cb8da328f2be350eff8677f32d
 --- !u!1001 &1910377262
 Prefab:
   m_ObjectHideFlags: 0
