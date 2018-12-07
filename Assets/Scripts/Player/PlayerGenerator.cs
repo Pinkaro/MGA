@@ -4,6 +4,8 @@ namespace Assets.Scripts.Player
 {
     public class PlayerGenerator : MonoBehaviour
     {
+        public static PlayerGenerator instance = null;
+
         public int WidthDivisor = 8;
         public int HeightDivisor = 6;
         public GameObject PlayerBlueprint;
@@ -21,6 +23,15 @@ namespace Assets.Scripts.Player
 
         void Awake()
         {
+            if (instance == null)
+            {
+                instance = this;
+            }
+            else if (instance != this)
+            {
+                Destroy(gameObject);
+            }
+            
             controllerNames = Input.GetJoystickNames();
             InitSpawnpoints();
 
@@ -65,15 +76,24 @@ namespace Assets.Scripts.Player
                 // #######################################################################
                 // ######### ALSO SPAWNS PLAYERS IN DISC FOR NOW, DELETE AFTERWARDS
                 // #######################################################################
-                Transform PlayerWrapper = Disc.transform.Find("Players");
-                GameObject TESTDISCPLAYER = Instantiate(PlayerInDiscBlueprint, PlayerWrapper);
-                TESTDISCPLAYER.transform.localScale -= new Vector3(0.9f, 0.9f, 0.0f);
-                TESTDISCPLAYER.GetComponent<PlayerInDiscController>().PlayerId = currentPlayerId;
-                TESTDISCPLAYER.GetComponent<SpriteRenderer>().color = playerColors[spawnedPlayers];
+                //Transform PlayerWrapper = Disc.transform.Find("Players");
+                //GameObject TESTDISCPLAYER = Instantiate(PlayerInDiscBlueprint, PlayerWrapper);
+                //TESTDISCPLAYER.transform.localScale -= new Vector3(0.9f, 0.9f, 0.0f);
+                //TESTDISCPLAYER.GetComponent<PlayerInDiscController>().PlayerId = currentPlayerId;
+                //TESTDISCPLAYER.GetComponent<SpriteRenderer>().color = playerColors[spawnedPlayers];
                 // #######################################################################
 
                 spawnedPlayers++;
             }
+        }
+
+        public void SpawnPlayerInDisc(string playerId, Color color)
+        {
+            Transform PlayerWrapper = Disc.transform.Find("Players");
+            GameObject discPlayer = Instantiate(PlayerInDiscBlueprint, PlayerWrapper);
+            discPlayer.transform.localScale -= new Vector3(0.9f, 0.9f, 0.0f);
+            discPlayer.GetComponent<PlayerInDiscController>().PlayerId = playerId;
+            discPlayer.GetComponent<SpriteRenderer>().color = color;
         }
 
         private string GeneratePlayerId(int controllerId)

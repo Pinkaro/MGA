@@ -27,13 +27,9 @@ public class HealthManager : MonoBehaviour
     {
         Health += effect;
 
-        spriteRenderer.material.color = Color.red;
-
         if (Health <= 0.0f)
         {
             Destroy(this.gameObject);
         }
-
-        
     }
 }

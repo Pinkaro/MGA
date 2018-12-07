@@ -614,8 +614,8 @@ MonoBehaviour:
   Ammunition: {fileID: 1669312530769958, guid: cc392f853d500c449988222bbda294a3, type: 2}
   Firerate: 4.2
   Spread: 0
-  Damage: 10
-  Speed: 3.6
+  Damage: 2
+  Speed: 10
 --- !u!114 &114255708177781256
 MonoBehaviour:
   m_ObjectHideFlags: 1
