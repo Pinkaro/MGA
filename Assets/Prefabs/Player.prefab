@@ -213,12 +213,15 @@ MonoBehaviour:
   shootable: {fileID: 0}
   DeathParticleSystem: {fileID: 198908598705143922}
   TrailParticleSystem: {fileID: 198830020181964740}
+  color: {r: 0, g: 0, b: 0, a: 0}
   rotationSpeed: 5
   AccelerationForce: 10
   BrakeForce: 0.95
   SlowBrakeForce: 0.98
   BrakeThreshold: 0.7
   TurnModifier: 20
+  _canMove: 1
+  HealthManager: {fileID: 114291315124852872}
 --- !u!114 &114291315124852872
 MonoBehaviour:
   m_ObjectHideFlags: 1

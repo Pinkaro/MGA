@@ -6,13 +6,12 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    [Range(1.0f, 150.0f)] public float Health;
+    public float Health;
 
     private SpriteRenderer spriteRenderer;
 
     void Awake()
     {
-
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 

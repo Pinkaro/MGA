@@ -4,11 +4,29 @@ using UnityEngine;
 
 public class EndGameManager : MonoBehaviour
 {
+    public float playerHealth = 10;
+    public float discHealth = 10;
+    public DiscController disc;
+
     private PlayerSpaceshipController _survivor;
     private List<PlayerInDiscController> _inDiscControllers;
 
     private Vector3 _endGameSpawnpoint;
-    
+
+    public static EndGameManager instance = null;
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
     IEnumerator EndGameStart()
     {
         _survivor._canMove = false;
@@ -21,8 +39,7 @@ public class EndGameManager : MonoBehaviour
         _inDiscControllers.ForEach(p => p.transform.position = Vector3.zero);
 
         yield return new WaitForSeconds(5);
-        _survivor._canMove = true;
-        _inDiscControllers.ForEach(p => p._canMove = true);
+        SetValues();
     }
 
     public void StartEndGame(PlayerSpaceshipController survivor, List<PlayerInDiscController> inDiscControllers, Vector3 endGameSpawnpoint)
@@ -33,7 +50,20 @@ public class EndGameManager : MonoBehaviour
         StartCoroutine("EndGameStart");
     }
 
+    private void SetValues()
+    {
+        _survivor._canMove = true;
+        _inDiscControllers.ForEach(p => p._canMove = true);
+        _survivor.HealthManager.Health = playerHealth;
+        disc.HealthManager.Health = discHealth;
+    }
+
     public void DiscWin()
+    {
+
+    }
+
+    public void SurvivorWin()
     {
 
     }

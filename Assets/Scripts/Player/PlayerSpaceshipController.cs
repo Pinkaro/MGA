@@ -34,8 +34,10 @@ public class PlayerSpaceshipController : MonoBehaviour, IKillable
     public float TurnModifier = 10.0f;
 
     private Rigidbody2D rb;
-    
+    [HideInInspector]
     public bool _canMove = true;
+
+    public HealthManager HealthManager;
 
     void Start()
     {
