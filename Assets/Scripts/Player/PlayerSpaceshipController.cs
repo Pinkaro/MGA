@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 using Assets.Scripts.Player;
 using UnityEngine;
 
-public class PlayerSpaceshipController : MonoBehaviour
+public class PlayerSpaceshipController : MonoBehaviour, IKillable
 {
     
     public string PlayerId;
 
     public Shootable shootable;
 
-    public GameObject PlayerInDiscPrefab;
+    public ParticleSystem DeathParticleSystem;
+    public ParticleSystem TrailParticleSystem;
 
     [Range(1.0f, 10.0f)]
     public float rotationSpeed = 5.0f;
@@ -31,6 +33,7 @@ public class PlayerSpaceshipController : MonoBehaviour
     public float TurnModifier = 10.0f;
 
     private Rigidbody2D rb;
+    private bool _canMove = true;
 
     void Start()
     {
@@ -40,37 +43,68 @@ public class PlayerSpaceshipController : MonoBehaviour
 
     void FixedUpdate ()
     {
-	    if (Input.GetAxis($"Horizontal_{PlayerId}") != 0)
-	    {
-	        Turn();
-	    }
+        if (_canMove)
+        {
+            if (Input.GetAxis($"Horizontal_{PlayerId}") != 0)
+            {
+                Turn();
+            }
 
-	    if (Input.GetAxis($"Accelerate_{PlayerId}") > 0)
-	    {
-	        Accelerate(Input.GetAxisRaw($"Accelerate_{PlayerId}"));
+            if (Input.GetAxis($"Accelerate_{PlayerId}") > 0)
+            {
+                Accelerate(Input.GetAxisRaw($"Accelerate_{PlayerId}"));
+            }
+            else
+            {
+                Brake(SlowBrakeForce);
+            }
+
+            if (Input.GetButton($"Brake_{PlayerId}"))
+            {
+                Brake(BrakeForce);
+            }
         }
-	    else
-	    {
-	        Brake(SlowBrakeForce);
-	    }
-
-	    if (Input.GetButton($"Brake_{PlayerId}"))
-	    {
-	        Brake(BrakeForce);
-	    }
     }
 
     void Update()
     {
-        if ((Input.GetAxis($"Fire1_{PlayerId}") > 0))
+        if (_canMove)
         {
-            shootable.Shoot();
+            if ((Input.GetAxis($"Fire1_{PlayerId}") > 0))
+            {
+                shootable.Shoot();
+            }
         }
     }
 
-    void OnDestroy()
+    public void Die()
     {
         PlayerGenerator.instance.SpawnPlayerInDisc(PlayerId, GetComponent<SpriteRenderer>().color);
+        GetComponent<Collider2D>().enabled = false;
+        Destroy(TrailParticleSystem);
+        shootable.enabled = false;
+        DeathParticleSystem?.Play();
+        _canMove = false;
+        StartCoroutine("DieDelay");
+        StartCoroutine("ColorDecay");
+    }
+
+    IEnumerator DieDelay()
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(this.gameObject);
+    }
+    IEnumerator ColorDecay()
+    {
+        var sprite = GetComponent<SpriteRenderer>();
+        while (true)
+        {
+            var col = sprite.color;
+            col.a -= 0.1f;
+            sprite.color = col;
+            transform.localScale *= 0.9f;
+            yield return new WaitForSeconds(0.05f);
+        }
     }
 
     private void Turn()

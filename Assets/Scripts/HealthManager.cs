@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Assets.Scripts;
 using UnityEngine;
 
 public class HealthManager : MonoBehaviour
@@ -29,7 +31,13 @@ public class HealthManager : MonoBehaviour
 
         if (Health <= 0.0f)
         {
-            Destroy(this.gameObject);
+            var killables = transform.GetComponents<IKillable>().ToList();
+
+            foreach (var killable in killables)
+            {
+                killable.Die();
+            }
+            Destroy(this);
         }
     }
 }

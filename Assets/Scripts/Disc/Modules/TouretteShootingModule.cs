@@ -41,7 +41,7 @@ public class TouretteShootingModule : ModuleController
                 chargeSize += chargeIncreasePerSecond / 10;
                 //Debug.Log($"[TouretteModule] Current Charge Size {chargeSize}");
             }
-            yield return new WaitForSecondsRealtime(0.1f);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }
