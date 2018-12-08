@@ -13,6 +13,8 @@ public class EndGameManager : MonoBehaviour
 
     private Vector3 _endGameSpawnpoint;
 
+    public Animator EndGameStartAnimator;
+
     public static EndGameManager instance = null;
     void Awake()
     {
@@ -31,6 +33,9 @@ public class EndGameManager : MonoBehaviour
     {
         _survivor._canMove = false;
         _inDiscControllers.ForEach(p => p._canMove = false);
+        
+        EndGameStartAnimator.Play("EndGameStart");
+        yield return new WaitForSeconds(2);
 
         _survivor.transform.position = _endGameSpawnpoint;
         _survivor.transform.eulerAngles = new Vector3(0, 0, -90);
@@ -38,7 +43,7 @@ public class EndGameManager : MonoBehaviour
 
         _inDiscControllers.ForEach(p => p.transform.position = Vector3.zero);
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         SetValues();
     }
 
