@@ -8,7 +8,7 @@ public class GameInit : MonoBehaviour
     // Use this for initialization
 	void Start ()
 	{
-        PlayerGenerator.instance.LogControllerInfo();
-	    PlayerGenerator.instance.GeneratePlayers();
+        PlayerManager.instance.LogControllerInfo();
+	    PlayerManager.instance.GeneratePlayers();
     }
 }

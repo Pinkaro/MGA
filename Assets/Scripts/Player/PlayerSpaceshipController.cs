@@ -13,6 +13,7 @@ public class PlayerSpaceshipController : MonoBehaviour, IKillable
 
     public ParticleSystem DeathParticleSystem;
     public ParticleSystem TrailParticleSystem;
+    public Color color;
 
     [Range(1.0f, 10.0f)]
     public float rotationSpeed = 5.0f;
@@ -33,7 +34,8 @@ public class PlayerSpaceshipController : MonoBehaviour, IKillable
     public float TurnModifier = 10.0f;
 
     private Rigidbody2D rb;
-    private bool _canMove = true;
+    
+    public bool _canMove = true;
 
     void Start()
     {
@@ -79,7 +81,8 @@ public class PlayerSpaceshipController : MonoBehaviour, IKillable
 
     public void Die()
     {
-        PlayerGenerator.instance.SpawnPlayerInDisc(PlayerId, GetComponent<SpriteRenderer>().color);
+        color = GetComponent<SpriteRenderer>().color;
+        PlayerManager.instance.PlayerDeath(this);
         GetComponent<Collider2D>().enabled = false;
         Destroy(TrailParticleSystem);
         shootable.enabled = false;
