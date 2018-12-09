@@ -8,6 +8,7 @@ TagManager:
   - Ammunition
   - Disc
   - Terminal
+  - SlowAmmu
   layers:
   - Default
   - TransparentFX
