@@ -83,15 +83,18 @@ public class PlayerSpaceshipController : MonoBehaviour, IKillable
 
     public void Die()
     {
-        color = GetComponent<SpriteRenderer>().color;
-        PlayerManager.instance.PlayerDeath(this);
-        GetComponent<Collider2D>().enabled = false;
-        Destroy(TrailParticleSystem);
-        shootable.enabled = false;
-        DeathParticleSystem?.Play();
-        _canMove = false;
-        StartCoroutine("DieDelay");
-        StartCoroutine("ColorDecay");
+        if (_canMove)
+        {
+            color = GetComponent<SpriteRenderer>().color;
+            PlayerManager.instance.PlayerDeath(this);
+            GetComponent<Collider2D>().enabled = false;
+            Destroy(TrailParticleSystem);
+            shootable.enabled = false;
+            DeathParticleSystem?.Play();
+            _canMove = false;
+            StartCoroutine("DieDelay");
+            StartCoroutine("ColorDecay");
+        }
     }
 
     IEnumerator DieDelay()

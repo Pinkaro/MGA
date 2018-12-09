@@ -14,6 +14,11 @@ public class EndGameManager : MonoBehaviour
     private Vector3 _endGameSpawnpoint;
 
     public Animator EndGameStartAnimator;
+    public Animator GameEndAnimator;
+
+    private readonly string _endGameStartAnimation = "EndGameStart";
+    private readonly string _gameEndSpaceshipWinAnimation = "GameEndSpaceshipWin";
+    private readonly string _gameEndDiscWinAnimation = "GameEndDiscWin";
 
     public static EndGameManager instance = null;
     void Awake()
@@ -34,7 +39,7 @@ public class EndGameManager : MonoBehaviour
         _survivor._canMove = false;
         _inDiscControllers.ForEach(p => p._canMove = false);
         
-        EndGameStartAnimator.Play("EndGameStart");
+        EndGameStartAnimator.Play(_endGameStartAnimation);
         yield return new WaitForSeconds(2);
 
         _survivor.transform.position = _endGameSpawnpoint;
@@ -52,7 +57,7 @@ public class EndGameManager : MonoBehaviour
         _survivor = survivor;
         _inDiscControllers = inDiscControllers;
         _endGameSpawnpoint = endGameSpawnpoint;
-        StartCoroutine("EndGameStart");
+        StartCoroutine(_endGameStartAnimation);
     }
 
     private void SetValues()
@@ -65,11 +70,11 @@ public class EndGameManager : MonoBehaviour
 
     public void DiscWin()
     {
-
+        GameEndAnimator.Play(_gameEndDiscWinAnimation);
     }
 
-    public void SurvivorWin()
+    public void SpaceshipWin()
     {
-
+        GameEndAnimator.Play(_gameEndSpaceshipWinAnimation);
     }
 }
