@@ -214,6 +214,22 @@ InputManager:
     axis: 9
     joyNum: 1
   - serializedVersion: 3
+    m_Name: Fire1_Joy1
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: mouse 0
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 9
+    joyNum: 1
+  - serializedVersion: 3
     m_Name: Fire1_Joy2
     descriptiveName: 
     descriptiveNegativeName: 

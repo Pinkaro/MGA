@@ -62,6 +62,9 @@ namespace Assets.Scripts.Player
                 currentPlayer.GetComponent<SpriteRenderer>().color = playerColors[spawnedPlayers];
                 currentPlayer.GetComponent<PlayerSpaceshipController>().PlayerId = currentPlayerId;
 
+                //
+                    LogPlayerGeneration(currentPlayerId);
+                //
                 // #######################################################################
                 // ######### ALSO SPAWNS PLAYERS IN DISC FOR NOW, DELETE AFTERWARDS
                 // #######################################################################
@@ -107,6 +110,11 @@ namespace Assets.Scripts.Player
 
             spawnpoints[3] = mainCam.ScreenToWorldPoint(topRight);
             spawnpoints[3].z = 0.0f;
+        }
+
+        private void LogPlayerGeneration(string playerId)
+        {
+            Debug.Log("Player generated with ID: " + playerId);
         }
     }
 }
