@@ -1,13 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
+using Assets.Scripts.Player;
 using UnityEngine;
 
-public class PlayerSpaceshipController : MonoBehaviour
+public class PlayerSpaceshipController : MonoBehaviour, IKillable
 {
-    [HideInInspector]
+    
     public string PlayerId;
 
     public Shootable shootable;
+
+    public ParticleSystem DeathParticleSystem;
+    public ParticleSystem TrailParticleSystem;
+    public Color color;
 
     [Range(1.0f, 10.0f)]
     public float rotationSpeed = 5.0f;
@@ -15,19 +21,23 @@ public class PlayerSpaceshipController : MonoBehaviour
     [Range(1.0f, 20.0f)]
     public float AccelerationForce = 10.0f;
 
-    [Range(0.1f, 5.0f)]
+    [Range(1.0f, 0.0f)]
     public float BrakeForce = 0.95f;
 
-    [Range(0.1f, 5.0f)]
+    [Range(1.0f, 0.0f)]
     public float SlowBrakeForce = 0.98f;
 
-    [Range(0.1f, 5.0f)]
+    [Range(1.0f, 0.0f)]
     public float BrakeThreshold = 0.7f;
 
     [Range(1.0f, 20.0f)]
     public float TurnModifier = 10.0f;
 
     private Rigidbody2D rb;
+    [HideInInspector]
+    public bool _canMove = true;
+
+    public HealthManager HealthManager;
 
     void Start()
     {
@@ -37,31 +47,68 @@ public class PlayerSpaceshipController : MonoBehaviour
 
     void FixedUpdate ()
     {
-	    if (Input.GetAxis($"Horizontal_{PlayerId}") != 0)
-	    {
-	        Turn();
-	    }
+        if (_canMove)
+        {
+            if (Input.GetAxis($"Horizontal_{PlayerId}") != 0)
+            {
+                Turn();
+            }
 
-	    if (Input.GetAxis($"Accelerate_{PlayerId}") > 0)
-	    {
-	        Accelerate(Input.GetAxisRaw($"Accelerate_{PlayerId}"));
+            if (Input.GetAxis($"Accelerate_{PlayerId}") > 0)
+            {
+                Accelerate(Input.GetAxisRaw($"Accelerate_{PlayerId}"));
+            }
+            else
+            {
+                Brake(SlowBrakeForce);
+            }
+
+            if (Input.GetButton($"Brake_{PlayerId}"))
+            {
+                Brake(BrakeForce);
+            }
         }
-	    else
-	    {
-	        Brake(SlowBrakeForce);
-	    }
-
-	    if (Input.GetButton($"Brake_{PlayerId}"))
-	    {
-	        Brake(BrakeForce);
-	    }
     }
 
     void Update()
     {
-        if ((Input.GetAxis($"Fire1_{PlayerId}") > 0))
+        if (_canMove)
         {
-            shootable.Shoot();
+            if ((Input.GetAxis($"Fire1_{PlayerId}") > 0))
+            {
+                shootable.Shoot();
+            }
+        }
+    }
+
+    public void Die()
+    {
+        color = GetComponent<SpriteRenderer>().color;
+        PlayerManager.instance.PlayerDeath(this);
+        GetComponent<Collider2D>().enabled = false;
+        Destroy(TrailParticleSystem);
+        shootable.enabled = false;
+        DeathParticleSystem?.Play();
+        _canMove = false;
+        StartCoroutine("DieDelay");
+        StartCoroutine("ColorDecay");
+    }
+
+    IEnumerator DieDelay()
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(this.gameObject);
+    }
+    IEnumerator ColorDecay()
+    {
+        var sprite = GetComponent<SpriteRenderer>();
+        while (true)
+        {
+            var col = sprite.color;
+            col.a -= 0.1f;
+            sprite.color = col;
+            transform.localScale *= 0.9f;
+            yield return new WaitForSeconds(0.05f);
         }
     }
 

@@ -55,6 +55,8 @@ GameObject:
   - component: {fileID: 4732383318114574}
   - component: {fileID: 212411280399601210}
   - component: {fileID: 58804921521449894}
+  - component: {fileID: 114333246458693194}
+  - component: {fileID: 114335108271530986}
   m_Layer: 8
   m_Name: Disc
   m_TagString: Disc
@@ -515,7 +517,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.02
 --- !u!58 &58772094398139460
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -530,7 +532,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.02
 --- !u!58 &58804921521449894
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -560,7 +562,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.02
 --- !u!68 &68898076621750600
 EdgeCollider2D:
   m_ObjectHideFlags: 1
@@ -614,8 +616,8 @@ MonoBehaviour:
   Ammunition: {fileID: 1669312530769958, guid: cc392f853d500c449988222bbda294a3, type: 2}
   Firerate: 4.2
   Spread: 0
-  Damage: 10
-  Speed: 3.6
+  Damage: 3
+  Speed: 10
 --- !u!114 &114255708177781256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -632,6 +634,30 @@ MonoBehaviour:
   Spread: 0
   Damage: 10
   Speed: 3.6
+--- !u!114 &114333246458693194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1173025564974404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5698f181c6887ca49a8805c4d37cbb4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthManager: {fileID: 114335108271530986}
+--- !u!114 &114335108271530986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1173025564974404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6206bb8eb0956854597a0e2d84fd7a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 99999
 --- !u!114 &114518264502589858
 MonoBehaviour:
   m_ObjectHideFlags: 1

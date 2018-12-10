@@ -45,7 +45,7 @@ public class Shootable : MonoBehaviour
         if(projectileLogic == null) Debug.LogError("Ammunition does not have ProjectileLogic component.");
 	}
 
-    public void Shoot(float projectileSize = 5)
+    public void Shoot(float projectileSize = 5, float soundVolume = 0.1f)
     {
         if (Time.time > timeToFire)
         {
@@ -56,6 +56,9 @@ public class Shootable : MonoBehaviour
             GameObject ammu = Instantiate(Ammunition, firePoint.position, firePoint.rotation);
             ammu.transform.localScale = new Vector3(projectileSize,projectileSize,1);
             ammu.transform.Rotate(new Vector3(0,0,-90));
+
+            ammu.GetComponent<AudioSource>().volume = soundVolume;
+
             ProjectileLogic ammuLogic = ammu.GetComponent<ProjectileLogic>();
             ammuLogic.AvoidCollisionByGameObject(gameObject);
 

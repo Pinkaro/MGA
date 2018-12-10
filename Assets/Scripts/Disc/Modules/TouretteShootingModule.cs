@@ -12,9 +12,9 @@ public class TouretteShootingModule : ModuleController
     
     protected override void Fire1Press()
     {
-        Debug.Log("[TouretteModule] Start Charge");
         if (charging == false)
         {
+            Debug.Log("[TouretteModule] Start Charge");
             charging = true;
             StartCoroutine("Charge");
         }
@@ -26,8 +26,8 @@ public class TouretteShootingModule : ModuleController
         charging = false;
         if (chargeSize > chargeThreshold)
         {
-            //Debug.Log($"[TouretteModule] Release Charge: Size {chargeSize}");
-            shootable.Shoot(chargeSize);
+            Debug.Log($"[TouretteModule] Release Charge: Size {chargeSize}");
+            shootable.Shoot(chargeSize, (chargeSize/maximumCharge)/ (maximumCharge/chargeSize));
         }
         chargeSize = 0;
     }
@@ -39,9 +39,9 @@ public class TouretteShootingModule : ModuleController
             if (maximumCharge > chargeSize)
             {
                 chargeSize += chargeIncreasePerSecond / 10;
-                Debug.Log($"[TouretteModule] Current Charge Size {chargeSize}");
+                //Debug.Log($"[TouretteModule] Current Charge Size {chargeSize}");
             }
-            yield return new WaitForSecondsRealtime(0.1f);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

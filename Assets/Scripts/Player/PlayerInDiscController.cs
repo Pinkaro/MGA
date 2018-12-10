@@ -18,6 +18,9 @@ public class PlayerInDiscController : MonoBehaviour
 
     private ModuleController moduleController;
 
+    [HideInInspector]
+    public bool _canMove = true;
+
     // Use this for initialization
     void Start()
     {
@@ -51,28 +54,33 @@ public class PlayerInDiscController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!this.remoteControl)
+        if (_canMove)
         {
-            rb.velocity = 
-                MovementSpeed * new Vector2(Input.GetAxis($"Horizontal_{PlayerId}"), -Input.GetAxis($"Vertical_{PlayerId}")).normalized;
-            
-            if (Input.GetAxis($"Accelerate_{PlayerId}") > 0)
+            if (!this.remoteControl)
             {
-                
+                rb.velocity =
+                    MovementSpeed * new Vector2(Input.GetAxis($"Horizontal_{PlayerId}"),
+                        -Input.GetAxis($"Vertical_{PlayerId}")).normalized;
+
+                if (Input.GetAxis($"Accelerate_{PlayerId}") > 0)
+                {
+
+                }
+
+                if (Input.GetAxis($"Fire1_{PlayerId}") > 0)
+                {
+
+                }
+            }
+            else
+            {
+                rb.velocity = Vector2.zero;
             }
 
-            if (Input.GetAxis($"Fire1_{PlayerId}") > 0)
+            if (Input.GetButton($"Brake_{PlayerId}"))
             {
-
+                clearModule();
             }
-        }
-        else
-        {
-            rb.velocity = Vector2.zero;
-        }
-        if (Input.GetButton($"Brake_{PlayerId}"))
-        {
-            clearModule();
         }
     }
 }
