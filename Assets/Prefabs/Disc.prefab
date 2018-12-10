@@ -613,7 +613,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f35a7cb6b8b200a4e9a60fa87be39543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ammunition: {fileID: 1669312530769958, guid: cc392f853d500c449988222bbda294a3, type: 2}
+  Ammunition:
+  - {fileID: 1119362585055656, guid: b0ce7f2c68278154bad0c48ee3e0f94b, type: 2}
+  - {fileID: 1669312530769958, guid: cc392f853d500c449988222bbda294a3, type: 2}
+  - {fileID: 1888296035531404, guid: 49bb65ea7a23f8e46b97673ccc276079, type: 2}
   Firerate: 4.2
   Spread: 0
   Damage: 3
@@ -629,7 +632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f35a7cb6b8b200a4e9a60fa87be39543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ammunition: {fileID: 1376197670016558, guid: 375eec835dfa77a4482ec3f61055b20b, type: 2}
+  Ammunition:
+  - {fileID: 1376197670016558, guid: 375eec835dfa77a4482ec3f61055b20b, type: 2}
   Firerate: 4.2
   Spread: 0
   Damage: 10

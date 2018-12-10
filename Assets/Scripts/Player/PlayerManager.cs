@@ -42,7 +42,7 @@ namespace Assets.Scripts.Player
             {
                 Destroy(gameObject);
             }
-            
+
             controllerNames = Input.GetJoystickNames();
             InitSpawnpoints();
 
@@ -61,6 +61,33 @@ namespace Assets.Scripts.Player
             {
                 Debug.Log(controller);
             }
+        }
+
+        public void GenerateMockPlayer()
+        {
+            string currentPlayerId = string.Empty;
+            GameObject currentPlayer = null;
+
+            currentPlayerId = "MOCK";
+            currentPlayer = Instantiate(PlayerBlueprint, spawnpoints[0], Quaternion.identity);
+            currentPlayer.transform.up = cameraMiddle - spawnpoints[0];
+            currentPlayer.GetComponent<SpriteRenderer>().color = playerColors[0];
+            currentPlayer.GetComponent<PlayerSpaceshipController>().PlayerId = currentPlayerId;
+            alivePlayers.Add(currentPlayer.GetComponent<PlayerSpaceshipController>());
+
+            LogPlayerGeneration(currentPlayerId);
+
+            // #######################################################################
+            // ######### ALSO SPAWNS PLAYERS IN DISC FOR NOW, DELETE AFTERWARDS
+            // #######################################################################
+            Transform PlayerWrapper = Disc.transform.Find("Players");
+            GameObject TESTDISCPLAYER = Instantiate(PlayerInDiscBlueprint, PlayerWrapper);
+            TESTDISCPLAYER.transform.localScale -= new Vector3(0.9f, 0.9f, 0.0f);
+            TESTDISCPLAYER.GetComponent<PlayerInDiscController>().PlayerId = currentPlayerId;
+            TESTDISCPLAYER.GetComponent<SpriteRenderer>().color = playerColors[0];
+            // #######################################################################
+
+
         }
 
         public void GeneratePlayers()
@@ -86,7 +113,7 @@ namespace Assets.Scripts.Player
                 alivePlayers.Add(currentPlayer.GetComponent<PlayerSpaceshipController>());
 
                 //
-                    LogPlayerGeneration(currentPlayerId);
+                LogPlayerGeneration(currentPlayerId);
                 //
                 // #######################################################################
                 // ######### ALSO SPAWNS PLAYERS IN DISC FOR NOW, DELETE AFTERWARDS
