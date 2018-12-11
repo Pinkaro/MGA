@@ -6,7 +6,7 @@ using Random = System.Random;
 
 public class Shootable : MonoBehaviour
 {
-    public GameObject Ammunition;
+    public GameObject[] Ammunition;
 
     [Range(0.0f, 20.0f)]
     public float Firerate = 1.0f;
@@ -23,12 +23,13 @@ public class Shootable : MonoBehaviour
     private Transform firePoint;
     private float timeToFire;
     private string playerId;
+    private System.Random rand;
 
 	// Use this for initialization
 	void Awake ()
 	{
 	    firePoint = gameObject.transform.Find("Firepoint");
-	    ProjectileLogic projectileLogic = Ammunition.GetComponent<ProjectileLogic>();
+	    rand = new System.Random();
 
         // to ensure ammunition flies faster than players
 	    PlayerSpaceshipController shipController = GetComponent<PlayerSpaceshipController>();
@@ -38,14 +39,20 @@ public class Shootable : MonoBehaviour
 	        playerId = shipController.PlayerId;
         }
 	    
-	    
-	    
-
 	    if(firePoint == null) Debug.LogError("Firepoint was null. Is child missing or named wrong?");
-        if(projectileLogic == null) Debug.LogError("Ammunition does not have ProjectileLogic component.");
+        
+
+	    ProjectileLogic projectileLogic = null;
+
+        foreach (GameObject ammuType in Ammunition)
+	    {
+            projectileLogic = ammuType.GetComponent<ProjectileLogic>();
+
+	        if (projectileLogic == null) Debug.LogError("Ammunition \"" + ammuType.name + "\" does not have ProjectileLogic component.");
+        }
 	}
 
-    public void Shoot()
+    public void Shoot(float projectileSize = 5, float soundVolume = 0.1f)
     {
         if (Time.time > timeToFire)
         {
@@ -53,7 +60,15 @@ public class Shootable : MonoBehaviour
             {
                 timeToFire = Time.time + 1 / Firerate;
             }
-            GameObject ammu = Instantiate(Ammunition, firePoint.position, firePoint.rotation);
+
+            int randomAmmo = rand.Next(0, Ammunition.Length);
+
+            GameObject ammu = Instantiate(Ammunition[randomAmmo], firePoint.position, firePoint.rotation);
+            ammu.transform.localScale = new Vector3(projectileSize,projectileSize,1);
+            ammu.transform.Rotate(new Vector3(0,0,-90));
+
+            ammu.GetComponent<AudioSource>().volume = soundVolume;
+
             ProjectileLogic ammuLogic = ammu.GetComponent<ProjectileLogic>();
             ammuLogic.AvoidCollisionByGameObject(gameObject);
 

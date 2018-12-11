@@ -5,19 +5,14 @@ using UnityEngine;
 public class ProjectileLogic : MonoBehaviour
 {
 
-    private Vector3 travelDirection;
+    public string[] TagsIgnoreCollision;
 
     private float damage;
-
-    private float speed;
 	
 	// Update is called once per frame
 	void Update ()
 	{
-	    Rigidbody2D rigidBodyAmmunition = GetComponent<Rigidbody2D>();
-	    rigidBodyAmmunition.AddForce(travelDirection * speed);
-
-        Vector3 screenPoint = Camera.main.WorldToViewportPoint(transform.position);
+	    Vector3 screenPoint = Camera.main.WorldToViewportPoint(transform.position);
 	    bool onScreen = screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1;
 
 	    if (!onScreen)
@@ -28,11 +23,18 @@ public class ProjectileLogic : MonoBehaviour
 
     public void Initiate(Vector3 travelDirection, float damage, float speed)
     {
-        this.travelDirection = travelDirection;
         this.damage = damage;
-        this.speed = speed;
 
-        AvoidCollisionByTag("Ammunition");
+        foreach (string tag in TagsIgnoreCollision)
+        {
+            AvoidCollisionByTag(tag);
+        }
+
+        AudioSource ammuAudio = GetComponent<AudioSource>();
+        ammuAudio.Play();
+
+        Rigidbody2D rigidBodyAmmunition = GetComponent<Rigidbody2D>();
+        rigidBodyAmmunition.AddForce(travelDirection * speed, ForceMode2D.Impulse);
     }
 
     private void AvoidCollisionByTag(string tag)

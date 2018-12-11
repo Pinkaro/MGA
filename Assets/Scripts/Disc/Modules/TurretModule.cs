@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TurretModule : ModuleController
 {
-    /*
+
     public Shootable shootable;
     public Transform transformToRotate;
     public Transform rotateAround;
@@ -37,10 +37,9 @@ public class TurretModule : ModuleController
         }
     }
 
-    protected override void Fire1()
+    protected override void Fire1Press()
     {
         Debug.Log("[TurretModule] Shoot");
         shootable.Shoot();
     }
-    */
 }

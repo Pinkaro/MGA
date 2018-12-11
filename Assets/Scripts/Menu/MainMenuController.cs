@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour {
 
@@ -16,13 +17,21 @@ public class MainMenuController : MonoBehaviour {
     public void StartGame()
     {
         Debug.Log("Start");
+        SceneManager.LoadScene(1);
     }
 
     public void ShowCredits()
     {
-        Debug.Log("Credits");
+        Debug.Log("Credits da");
         credits.SetActive(true);
         menu.SetActive(false);
+    }
+
+    public void HideCredits()
+    {
+        Debug.Log("Credits weg");
+        credits.SetActive(false);
+        menu.SetActive(true);
     }
 
     public void ShowMenu()
