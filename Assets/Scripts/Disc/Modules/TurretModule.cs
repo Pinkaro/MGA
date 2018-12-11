@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TurretModule : ModuleController
 {
-
     public Shootable shootable;
     public Transform transformToRotate;
     public Transform rotateAround;
@@ -24,7 +23,6 @@ public class TurretModule : ModuleController
             transformToRotate = transform;
         }
     }
-
 
     protected override void Horizontal(float input)
     {
