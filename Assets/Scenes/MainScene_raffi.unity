@@ -563,6 +563,11 @@ Prefab:
       propertyPath: Disc
       value: 
       objectReference: {fileID: 1967923930}
+    - target: {fileID: 114343062338343390, guid: 47417b3d47cb2ba4b915ee8246e06926,
+        type: 2}
+      propertyPath: SpawnMock
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47417b3d47cb2ba4b915ee8246e06926, type: 2}
   m_IsPrefabAsset: 0

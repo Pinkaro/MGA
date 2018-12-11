@@ -1106,6 +1106,9 @@ MonoBehaviour:
   transformToRotate: {fileID: 710406896}
   rotateAround: {fileID: 1967923935}
   rotationSpeed: 0.1
+  Firepoint: {fileID: 612230536}
+  BeamBlueprint: {fileID: 1872726938975164, guid: 336e27207a21cbb44b8759bebf9243ff,
+    type: 2}
 --- !u!212 &710406899
 SpriteRenderer:
   m_ObjectHideFlags: 0
