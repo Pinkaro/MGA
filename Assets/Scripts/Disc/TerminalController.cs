@@ -21,14 +21,17 @@ public class TerminalController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        player = other.gameObject;
-        if (this.player != null)
+        if (string.IsNullOrWhiteSpace(moduleController.Player))
         {
-            _controller = this.player.GetComponent<PlayerInDiscController>();
-        }
-        if (this._controller != null)
-        {
-            this.registeredModule = _controller.RegisterModule(moduleController, spritesToDye);
+            player = other.gameObject;
+            if (this.player != null)
+            {
+                _controller = this.player.GetComponent<PlayerInDiscController>();
+            }
+            if (this._controller != null)
+            {
+                this.registeredModule = _controller.RegisterModule(this, spritesToDye);
+            }
         }
     }
 }
