@@ -37,6 +37,7 @@ public class PlayerInDiscController : MonoBehaviour
         {
             module.Player = PlayerId;
             moduleController = module;
+
             Color playerColor = GetComponent<SpriteRenderer>().color;
             _previousModulColors.Clear();
 
@@ -52,7 +53,7 @@ public class PlayerInDiscController : MonoBehaviour
         return false;
     }
 
-    public void clearModule()
+    public void ClearModule()
     {
         if (moduleController != null)
         {
@@ -96,7 +97,7 @@ public class PlayerInDiscController : MonoBehaviour
 
             if (Input.GetButton($"Brake_{PlayerId}"))
             {
-                clearModule();
+                ClearModule();
             }
         }
     }
