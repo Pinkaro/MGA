@@ -22,6 +22,22 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
+    m_Name: Horizontal_MOCK
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: left
+    positiveButton: right
+    altNegativeButton: a
+    altPositiveButton: d
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 1
+    axis: 0
+    joyNum: 1
+  - serializedVersion: 3
     m_Name: Horizontal_Joy2
     descriptiveName: 
     descriptiveNegativeName: 
@@ -115,6 +131,22 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
+    axis: 1
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: Vertical_MOCK
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: down
+    positiveButton: up
+    altNegativeButton: s
+    altPositiveButton: w
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 1
+    type: 1
     axis: 1
     joyNum: 1
   - serializedVersion: 3
@@ -214,6 +246,22 @@ InputManager:
     axis: 9
     joyNum: 1
   - serializedVersion: 3
+    m_Name: Fire1_MOCK
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: mouse 0
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 9
+    joyNum: 1
+  - serializedVersion: 3
     m_Name: Fire1_Joy2
     descriptiveName: 
     descriptiveNegativeName: 
@@ -310,6 +358,22 @@ InputManager:
     axis: 8
     joyNum: 1
   - serializedVersion: 3
+    m_Name: Accelerate_MOCK
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: w
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 8
+    joyNum: 1
+  - serializedVersion: 3
     m_Name: Accelerate_Joy2
     descriptiveName: 
     descriptiveNegativeName: 
@@ -403,6 +467,22 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
+    axis: 0
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: Brake_MOCK
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: s
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
     axis: 0
     joyNum: 1
   - serializedVersion: 3
