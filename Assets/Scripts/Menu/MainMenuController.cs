@@ -39,4 +39,9 @@ public class MainMenuController : MonoBehaviour {
         Debug.Log("Menu");
         menu.SetActive(true);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
