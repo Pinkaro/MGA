@@ -8,6 +8,8 @@ TagManager:
   - Ammunition
   - Disc
   - Terminal
+  - SlowAmmu
+  - Boundaries
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - 
   - Player
   - Team
-  - 
+  - Boundaries
   - 
   - 
   - 

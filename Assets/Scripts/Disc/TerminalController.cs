@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TerminalController : MonoBehaviour
 {
-    
+    public List<SpriteRenderer> spritesToDye;
 
     public ModuleController moduleController;
     
@@ -21,7 +21,6 @@ public class TerminalController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("TRiGgEREd!!!!!!!!!!!!");
         player = other.gameObject;
         if (this.player != null)
         {
@@ -29,7 +28,7 @@ public class TerminalController : MonoBehaviour
         }
         if (this._controller != null)
         {
-            this.registeredModule = _controller.RegisterModule(moduleController);
+            this.registeredModule = _controller.RegisterModule(moduleController, spritesToDye);
         }
     }
 }

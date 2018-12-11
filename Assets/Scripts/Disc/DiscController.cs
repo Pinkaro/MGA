@@ -10,6 +10,6 @@ public class DiscController : MonoBehaviour,IKillable
 
     public void Die()
     {
-        EndGameManager.instance.SurvivorWin();
+        EndGameManager.instance.SpaceshipWin();
     }
 }
