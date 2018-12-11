@@ -605,19 +605,79 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114152743961751082, guid: 82b2d843df386dd46a4a9dc2de747784,
+    - target: {fileID: 212477919639848916, guid: 82b2d843df386dd46a4a9dc2de747784,
         type: 2}
-      propertyPath: transformToRotate
-      value: 
-      objectReference: {fileID: 1644719402}
-    - target: {fileID: 114152743961751082, guid: 82b2d843df386dd46a4a9dc2de747784,
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212477919639848916, guid: 82b2d843df386dd46a4a9dc2de747784,
         type: 2}
-      propertyPath: rotateAround
-      value: 
-      objectReference: {fileID: 1967923935}
-    - target: {fileID: 114152743961751082, guid: 82b2d843df386dd46a4a9dc2de747784,
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212477919639848916, guid: 82b2d843df386dd46a4a9dc2de747784,
         type: 2}
-      propertyPath: rotationSpeed
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212528605051861178, guid: 82b2d843df386dd46a4a9dc2de747784,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212528605051861178, guid: 82b2d843df386dd46a4a9dc2de747784,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212528605051861178, guid: 82b2d843df386dd46a4a9dc2de747784,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212975108502410224, guid: 82b2d843df386dd46a4a9dc2de747784,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212975108502410224, guid: 82b2d843df386dd46a4a9dc2de747784,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212975108502410224, guid: 82b2d843df386dd46a4a9dc2de747784,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212595864984443922, guid: 82b2d843df386dd46a4a9dc2de747784,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212595864984443922, guid: 82b2d843df386dd46a4a9dc2de747784,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212595864984443922, guid: 82b2d843df386dd46a4a9dc2de747784,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212914443605301130, guid: 82b2d843df386dd46a4a9dc2de747784,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212914443605301130, guid: 82b2d843df386dd46a4a9dc2de747784,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212914443605301130, guid: 82b2d843df386dd46a4a9dc2de747784,
+        type: 2}
+      propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -780,11 +840,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224323415159111134, guid: b6f9d7ac57708374ab82ede5a1efe36f,
     type: 2}
   m_PrefabInternal: {fileID: 801200099}
---- !u!4 &1644719402 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4419493396236426, guid: 82b2d843df386dd46a4a9dc2de747784,
-    type: 2}
-  m_PrefabInternal: {fileID: 631065837}
 --- !u!1 &1650281152
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,8 +881,3 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 631065837}
   m_Script: {fileID: 11500000, guid: 5698f181c6887ca49a8805c4d37cbb4b, type: 3}
---- !u!4 &1967923935 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4732383318114574, guid: 82b2d843df386dd46a4a9dc2de747784,
-    type: 2}
-  m_PrefabInternal: {fileID: 631065837}

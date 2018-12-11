@@ -9,11 +9,10 @@ public class GameInit : MonoBehaviour
 	void Start ()
 	{
         PlayerManager.instance.LogControllerInfo();
-	    //PlayerManager.instance.GeneratePlayers();
+	    PlayerManager.instance.GeneratePlayers();
 
-	    Debug.Log(
-	        "IF YOU READ THIS: I TURNED ON MOCK GENERATION INSTEAD OF NORMAL AND PROBABLY FORGOT TO REMOVE IT AGAIN. SAY HI TO ME!\n-Alex");
+	    //Debug.Log("IF YOU READ THIS: I TURNED ON MOCK GENERATION INSTEAD OF NORMAL AND PROBABLY FORGOT TO REMOVE IT AGAIN. SAY HI TO ME!\n-Alex");
 
-        PlayerManager.instance.GenerateMockPlayer();
+        //PlayerManager.instance.GenerateMockPlayer();
     }
 }

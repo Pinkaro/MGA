@@ -21,10 +21,13 @@ public class PlayerInDiscController : MonoBehaviour
     [HideInInspector]
     public bool _canMove = true;
 
+    private SpriteRenderer spriteRenderer;
+
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public bool RegisterModule(ModuleController module)
@@ -33,6 +36,7 @@ public class PlayerInDiscController : MonoBehaviour
         if (module != null)
         {
             module.Player = PlayerId;
+            module.colorRenderer.color = spriteRenderer.color;
             moduleController = module;
             return true;
         }
@@ -40,11 +44,12 @@ public class PlayerInDiscController : MonoBehaviour
         return false;
     }
 
-    public void clearModule()
+    public void ClearModule()
     {
         if (moduleController != null)
         {
             moduleController.Player = string.Empty;
+            moduleController.colorRenderer.color = Color.white;
         }
 
         this.remoteControl = false;
@@ -79,7 +84,7 @@ public class PlayerInDiscController : MonoBehaviour
 
             if (Input.GetButton($"Brake_{PlayerId}"))
             {
-                clearModule();
+                ClearModule();
             }
         }
     }

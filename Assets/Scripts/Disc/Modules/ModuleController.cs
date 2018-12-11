@@ -7,6 +7,8 @@ public abstract class ModuleController : MonoBehaviour
     public string Player;
 
     protected float movementSpeed = 1.0f;
+
+    public SpriteRenderer colorRenderer;
     
 	// Update is called once per frame
 	void Update () {
