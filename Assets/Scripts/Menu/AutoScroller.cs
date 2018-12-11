@@ -96,18 +96,20 @@ public class AutoScroller : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         Debug.Log("Start coroutine now");
         StartCoroutine(WaitForStart());
+        //isScrolling = true;
     }
 
     public IEnumerator WaitForStart()
     {
-        //Debug.Log("Waiting for "+ CreditsStartWaitTime + " seconds");
-        yield return new WaitForSeconds(CreditsStartWaitTime);
+        Debug.Log($"Waiting for {CreditsStartWaitTime} seconds");
+        yield return new WaitForSecondsRealtime(CreditsStartWaitTime);
+        Debug.Log("Finished waiting");
         isScrolling = true;
     }
 
     public IEnumerator WaitAndExit()
     {
-        yield return new WaitForSeconds(CreditsEndWaitTime);
+        yield return new WaitForSecondsRealtime(CreditsEndWaitTime);
         controller.HideCredits();
         content.localPosition = startPos;
     }
