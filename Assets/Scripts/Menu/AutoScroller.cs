@@ -95,13 +95,13 @@ public class AutoScroller : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public void StartAutoScroll()
     {
         Debug.Log("Start coroutine now");
-        //StartCoroutine(WaitForStart());
-        isScrolling = true;
+        StartCoroutine(WaitForStart());
+        //isScrolling = true;
     }
 
     public IEnumerator WaitForStart()
     {
-        Debug.Log("Waiting for "+ CreditsStartWaitTime + " seconds");
+        Debug.Log($"Waiting for {CreditsStartWaitTime} seconds");
         yield return new WaitForSecondsRealtime(CreditsStartWaitTime);
         Debug.Log("Finished waiting");
         isScrolling = true;
