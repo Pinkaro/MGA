@@ -16,7 +16,7 @@ public class PlayerInDiscController : MonoBehaviour
 
     public bool remoteControl;
 
-    private ModuleController moduleController;
+    private TerminalController terminalController;
 
     private List<SpriteRenderer> _previousModulColors;
 
@@ -30,13 +30,13 @@ public class PlayerInDiscController : MonoBehaviour
         _previousModulColors = new List<SpriteRenderer>();
     }
 
-    public bool RegisterModule(ModuleController module, IEnumerable<SpriteRenderer> toDye)
+    public bool RegisterModule(TerminalController terminal, IEnumerable<SpriteRenderer> toDye)
     {
         this.remoteControl = true;
-        if (module != null)
+        if (terminal != null)
         {
-            module.Player = PlayerId;
-            moduleController = module;
+            terminal.moduleController.Player = PlayerId;
+            terminalController = terminal;
 
             Color playerColor = GetComponent<SpriteRenderer>().color;
             _previousModulColors.Clear();
@@ -55,9 +55,9 @@ public class PlayerInDiscController : MonoBehaviour
 
     public void ClearModule()
     {
-        if (moduleController != null)
+        if (terminalController != null)
         {
-            moduleController.Player = string.Empty;
+            terminalController.moduleController.Player = string.Empty;
         }
 
         foreach (SpriteRenderer spriteRenderer in _previousModulColors)
@@ -66,7 +66,7 @@ public class PlayerInDiscController : MonoBehaviour
         }
 
         this.remoteControl = false;
-        this.moduleController = null;
+        this.terminalController = null;
     }
 
     // Update is called once per frame
