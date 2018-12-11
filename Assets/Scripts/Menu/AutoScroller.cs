@@ -94,7 +94,7 @@ public class AutoScroller : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void StartAutoScroll()
     {
-        //Debug.Log("Start coroutine now");
+        Debug.Log("Start coroutine now");
         StartCoroutine(WaitForStart());
     }
 
