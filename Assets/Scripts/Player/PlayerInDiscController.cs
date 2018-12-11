@@ -18,6 +18,8 @@ public class PlayerInDiscController : MonoBehaviour
 
     private ModuleController moduleController;
 
+    private List<SpriteRenderer> _previousModulColors;
+
     [HideInInspector]
     public bool _canMove = true;
 
@@ -25,15 +27,25 @@ public class PlayerInDiscController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        _previousModulColors = new List<SpriteRenderer>();
     }
 
-    public bool RegisterModule(ModuleController module)
+    public bool RegisterModule(ModuleController module, IEnumerable<SpriteRenderer> toDye)
     {
         this.remoteControl = true;
         if (module != null)
         {
             module.Player = PlayerId;
             moduleController = module;
+            Color playerColor = GetComponent<SpriteRenderer>().color;
+            _previousModulColors.Clear();
+
+            foreach (SpriteRenderer spriteRender in toDye)
+            {
+                _previousModulColors.Add(spriteRender);
+                spriteRender.color = playerColor;
+            }
+
             return true;
         }
         this.remoteControl = false;
@@ -45,6 +57,11 @@ public class PlayerInDiscController : MonoBehaviour
         if (moduleController != null)
         {
             moduleController.Player = string.Empty;
+        }
+
+        foreach (SpriteRenderer spriteRenderer in _previousModulColors)
+        {
+            spriteRenderer.color = Color.white;
         }
 
         this.remoteControl = false;
