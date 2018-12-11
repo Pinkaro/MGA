@@ -35,7 +35,7 @@ public class Shootable : MonoBehaviour
 	    PlayerSpaceshipController shipController = GetComponent<PlayerSpaceshipController>();
 	    if (shipController != null)
 	    {
-	        Speed += shipController.AccelerationForce;
+	        //Speed += shipController.AccelerationForce;
 	        playerId = shipController.PlayerId;
         }
 	    

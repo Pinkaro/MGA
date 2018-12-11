@@ -33,15 +33,14 @@ public class TractorModule : ModuleController
     {
         if (currentBeam == null)
         {
-            currentBeam = Instantiate(BeamBlueprint, Firepoint.position, Quaternion.identity, Firepoint);
+            currentBeam = Instantiate(BeamBlueprint, Firepoint);
             currentBeam.transform.right = Firepoint.position - transform.position;
-            currentBeam.transform.Translate(currentBeam.transform.forward);
         }
     }
 
     protected override void Fire1Release()
     {
-        //Destroy(currentBeam);
-        //currentBeam = null;
+        Destroy(currentBeam);
+        currentBeam = null;
     }
 }

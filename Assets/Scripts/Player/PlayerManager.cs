@@ -161,15 +161,6 @@ namespace Assets.Scripts.Player
             }
         }
 
-        void Update()
-        {
-            if (Input.GetAxis($"Accelerate_Joy1") > 0 && Input.GetButton($"Brake_Joy1") && Application.isEditor)
-            {
-                EndGameManager.StartEndGame(alivePlayers.SingleOrDefault(), deadPlayers, spawnpoints[4]);
-                _isEndGame = true;
-            }
-        }
-
         private string GeneratePlayerId(int controllerId)
         {
             return "Joy" + controllerId;
