@@ -4,10 +4,23 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour {
 
-    static string player1;
+    protected static string currentPlayerId;
 
-    public static void SetPlayerID(string id)
+
+    public void Start()
     {
-        player1 = id;
+        Debug.Log("Finding input");
+
+        string[] controllerNames = Input.GetJoystickNames();
+        
+        for (int i = 0; i < controllerNames.Length; i++)
+        {
+            if (string.IsNullOrEmpty(controllerNames[i]))
+                continue;
+            
+            currentPlayerId = PlayerManager.GeneratePlayerId(i + 1, controllerNames[i]); // so we map it to the correct joyNum in InputManager
+            break;
+        }
     }
+
 }
