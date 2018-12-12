@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿  using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +12,10 @@ public class TractorModule : ModuleController
 
     public GameObject BeamBlueprint;
 
+    public ParticleSystem TractorBeamBlueprint;
+
     private GameObject currentBeam;
+    private ParticleSystem TractorBeam;
 
     private bool firing;
 
@@ -35,6 +38,8 @@ public class TractorModule : ModuleController
         {
             currentBeam = Instantiate(BeamBlueprint, Firepoint);
             currentBeam.transform.right = Firepoint.position - transform.position;
+
+            TractorBeam = Instantiate(TractorBeamBlueprint, this.Firepoint);
         }
     }
 
@@ -42,5 +47,7 @@ public class TractorModule : ModuleController
     {
         Destroy(currentBeam);
         currentBeam = null;
+        Destroy(TractorBeam);
+        TractorBeam = null;
     }
 }
