@@ -16,7 +16,12 @@ public class HealthManager : MonoBehaviour
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        healthbarSpriteRenderer = Healthbar.GetComponent<SpriteRenderer>();
+        if (Healthbar != null)
+        {
+            healthbarSpriteRenderer = Healthbar.GetComponent<SpriteRenderer>();
+            healthbarSpriteRenderer.color = new Color(0,1,0,0.5f);
+        }
+        
     }
 
 	// Update is called once per frame
@@ -43,7 +48,7 @@ public class HealthManager : MonoBehaviour
                 var scale = Healthbar.transform.localScale;
                 scale.x = Health / maxHealth;
                 Healthbar.transform.localScale = scale;
-                //healthbarSpriteRenderer.doSmth();
+                healthbarSpriteRenderer.color = Color.Lerp(new Color(1, 0, 0, 0.5f), new Color(0, 1, 0, 0.5f), scale.x);
             }
         }
 
