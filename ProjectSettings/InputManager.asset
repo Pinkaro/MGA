@@ -22,6 +22,22 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
+    m_Name: Horizontal_Joy1_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: left
+    positiveButton: right
+    altNegativeButton: a
+    altPositiveButton: d
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 0
+    joyNum: 1
+  - serializedVersion: 3
     m_Name: Horizontal_MOCK
     descriptiveName: 
     descriptiveNegativeName: 
@@ -54,7 +70,39 @@ InputManager:
     axis: 0
     joyNum: 2
   - serializedVersion: 3
+    m_Name: Horizontal_Joy2_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: left
+    positiveButton: right
+    altNegativeButton: a
+    altPositiveButton: d
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 0
+    joyNum: 2
+  - serializedVersion: 3
     m_Name: Horizontal_Joy3
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: left
+    positiveButton: right
+    altNegativeButton: a
+    altPositiveButton: d
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 0
+    joyNum: 3
+  - serializedVersion: 3
+    m_Name: Horizontal_Joy3_PS4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: left
@@ -86,7 +134,39 @@ InputManager:
     axis: 0
     joyNum: 4
   - serializedVersion: 3
+    m_Name: Horizontal_Joy4_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: left
+    positiveButton: right
+    altNegativeButton: a
+    altPositiveButton: d
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 0
+    joyNum: 4
+  - serializedVersion: 3
     m_Name: Horizontal_Joy5
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: left
+    positiveButton: right
+    altNegativeButton: a
+    altPositiveButton: d
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 0
+    joyNum: 5
+  - serializedVersion: 3
+    m_Name: Horizontal_Joy5_PS4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: left
@@ -118,7 +198,39 @@ InputManager:
     axis: 0
     joyNum: 6
   - serializedVersion: 3
+    m_Name: Horizontal_Joy6_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: left
+    positiveButton: right
+    altNegativeButton: a
+    altPositiveButton: d
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 0
+    joyNum: 6
+  - serializedVersion: 3
     m_Name: Vertical_Joy1
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: down
+    positiveButton: up
+    altNegativeButton: s
+    altPositiveButton: w
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 1
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: Vertical_Joy1_PS4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: down
@@ -166,7 +278,39 @@ InputManager:
     axis: 1
     joyNum: 2
   - serializedVersion: 3
+    m_Name: Vertical_Joy2_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: down
+    positiveButton: up
+    altNegativeButton: s
+    altPositiveButton: w
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 1
+    joyNum: 2
+  - serializedVersion: 3
     m_Name: Vertical_Joy3
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: down
+    positiveButton: up
+    altNegativeButton: s
+    altPositiveButton: w
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 1
+    joyNum: 3
+  - serializedVersion: 3
+    m_Name: Vertical_Joy3_PS4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: down
@@ -198,7 +342,39 @@ InputManager:
     axis: 1
     joyNum: 4
   - serializedVersion: 3
+    m_Name: Vertical_Joy4_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: down
+    positiveButton: up
+    altNegativeButton: s
+    altPositiveButton: w
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 1
+    joyNum: 4
+  - serializedVersion: 3
     m_Name: Vertical_Joy5
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: down
+    positiveButton: up
+    altNegativeButton: s
+    altPositiveButton: w
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 1
+    joyNum: 5
+  - serializedVersion: 3
+    m_Name: Vertical_Joy5_PS4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: down
@@ -230,6 +406,22 @@ InputManager:
     axis: 1
     joyNum: 6
   - serializedVersion: 3
+    m_Name: Vertical_Joy6_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: down
+    positiveButton: up
+    altNegativeButton: s
+    altPositiveButton: w
+    gravity: 3
+    dead: 0.4
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 1
+    joyNum: 6
+  - serializedVersion: 3
     m_Name: Fire1_Joy1
     descriptiveName: 
     descriptiveNegativeName: 
@@ -244,6 +436,22 @@ InputManager:
     invert: 0
     type: 2
     axis: 9
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: Fire1_Joy1_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 4
     joyNum: 1
   - serializedVersion: 3
     m_Name: Fire1_MOCK
@@ -278,6 +486,22 @@ InputManager:
     axis: 9
     joyNum: 2
   - serializedVersion: 3
+    m_Name: Fire1_Joy2_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 4
+    joyNum: 2
+  - serializedVersion: 3
     m_Name: Fire1_Joy3
     descriptiveName: 
     descriptiveNegativeName: 
@@ -292,6 +516,22 @@ InputManager:
     invert: 0
     type: 2
     axis: 9
+    joyNum: 3
+  - serializedVersion: 3
+    m_Name: Fire1_Joy3_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 4
     joyNum: 3
   - serializedVersion: 3
     m_Name: Fire1_Joy4
@@ -310,6 +550,22 @@ InputManager:
     axis: 9
     joyNum: 4
   - serializedVersion: 3
+    m_Name: Fire1_Joy4_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 4
+    joyNum: 4
+  - serializedVersion: 3
     m_Name: Fire1_Joy5
     descriptiveName: 
     descriptiveNegativeName: 
@@ -324,6 +580,22 @@ InputManager:
     invert: 0
     type: 2
     axis: 9
+    joyNum: 5
+  - serializedVersion: 3
+    m_Name: Fire1_Joy5_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 4
     joyNum: 5
   - serializedVersion: 3
     m_Name: Fire1_Joy6
@@ -342,6 +614,22 @@ InputManager:
     axis: 9
     joyNum: 6
   - serializedVersion: 3
+    m_Name: Fire1_Joy6_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 4
+    joyNum: 6
+  - serializedVersion: 3
     m_Name: Accelerate_Joy1
     descriptiveName: 
     descriptiveNegativeName: 
@@ -356,6 +644,22 @@ InputManager:
     invert: 0
     type: 2
     axis: 8
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: Accelerate_Joy1_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 3
     joyNum: 1
   - serializedVersion: 3
     m_Name: Accelerate_MOCK
@@ -390,6 +694,22 @@ InputManager:
     axis: 8
     joyNum: 2
   - serializedVersion: 3
+    m_Name: Accelerate_Joy2_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 3
+    joyNum: 2
+  - serializedVersion: 3
     m_Name: Accelerate_Joy3
     descriptiveName: 
     descriptiveNegativeName: 
@@ -404,6 +724,22 @@ InputManager:
     invert: 0
     type: 2
     axis: 8
+    joyNum: 3
+  - serializedVersion: 3
+    m_Name: Accelerate_Joy3_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 3
     joyNum: 3
   - serializedVersion: 3
     m_Name: Accelerate_Joy4
@@ -422,6 +758,22 @@ InputManager:
     axis: 8
     joyNum: 4
   - serializedVersion: 3
+    m_Name: Accelerate_Joy4_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 3
+    joyNum: 4
+  - serializedVersion: 3
     m_Name: Accelerate_Joy5
     descriptiveName: 
     descriptiveNegativeName: 
@@ -436,6 +788,22 @@ InputManager:
     invert: 0
     type: 2
     axis: 8
+    joyNum: 5
+  - serializedVersion: 3
+    m_Name: Accelerate_Joy5_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 3
     joyNum: 5
   - serializedVersion: 3
     m_Name: Accelerate_Joy6
@@ -454,7 +822,39 @@ InputManager:
     axis: 8
     joyNum: 6
   - serializedVersion: 3
+    m_Name: Accelerate_Joy6_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 3
+    joyNum: 6
+  - serializedVersion: 3
     m_Name: Brake_Joy1
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: joystick button 4
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 0
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: Brake_Joy1_PS4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: joystick button 4
@@ -502,7 +902,39 @@ InputManager:
     axis: 0
     joyNum: 2
   - serializedVersion: 3
+    m_Name: Brake_Joy2_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: joystick button 4
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 0
+    joyNum: 2
+  - serializedVersion: 3
     m_Name: Brake_Joy3
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: joystick button 4
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 0
+    joyNum: 3
+  - serializedVersion: 3
+    m_Name: Brake_Joy3_PS4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: joystick button 4
@@ -534,6 +966,22 @@ InputManager:
     axis: 0
     joyNum: 4
   - serializedVersion: 3
+    m_Name: Brake_Joy4_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: joystick button 4
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 0
+    joyNum: 4
+  - serializedVersion: 3
     m_Name: Brake_Joy5
     descriptiveName: 
     descriptiveNegativeName: 
@@ -550,7 +998,39 @@ InputManager:
     axis: 0
     joyNum: 5
   - serializedVersion: 3
+    m_Name: Brake_Joy5_PS4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: joystick button 4
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 0
+    joyNum: 5
+  - serializedVersion: 3
     m_Name: Brake_Joy6
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: joystick button 4
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 0
+    joyNum: 6
+  - serializedVersion: 3
+    m_Name: Brake_Joy6_PS4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: joystick button 4
