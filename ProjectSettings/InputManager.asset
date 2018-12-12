@@ -841,7 +841,7 @@ InputManager:
     m_Name: Brake_Joy1
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 4
+    negativeButton: joystick 1 button 4
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -857,7 +857,7 @@ InputManager:
     m_Name: Brake_Joy1_PS4
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 4
+    negativeButton: joystick 1 button 4
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -889,7 +889,7 @@ InputManager:
     m_Name: Brake_Joy2
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 4
+    negativeButton: joystick 2 button 4
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -905,7 +905,7 @@ InputManager:
     m_Name: Brake_Joy2_PS4
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 4
+    negativeButton: joystick 2 button 4
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -921,7 +921,7 @@ InputManager:
     m_Name: Brake_Joy3
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 4
+    negativeButton: joystick 3 button 4
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -937,7 +937,7 @@ InputManager:
     m_Name: Brake_Joy3_PS4
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 4
+    negativeButton: joystick 3 button 4
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -953,7 +953,7 @@ InputManager:
     m_Name: Brake_Joy4
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 4
+    negativeButton: joystick 4 button 4
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -969,7 +969,7 @@ InputManager:
     m_Name: Brake_Joy4_PS4
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 4
+    negativeButton: joystick 4 button 4
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -985,7 +985,7 @@ InputManager:
     m_Name: Brake_Joy5
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 4
+    negativeButton: joystick 5 button 4
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -1001,7 +1001,7 @@ InputManager:
     m_Name: Brake_Joy5_PS4
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 4
+    negativeButton: joystick 5 button 4
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -1017,7 +1017,7 @@ InputManager:
     m_Name: Brake_Joy6
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 4
+    negativeButton: joystick 6 button 4
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -1033,7 +1033,7 @@ InputManager:
     m_Name: Brake_Joy6_PS4
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 4
+    negativeButton: joystick 6 button 4
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -1065,7 +1065,7 @@ InputManager:
     m_Name: MenuSubmit_Joy1
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 0
+    negativeButton: joystick 1 button 0
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -1081,7 +1081,7 @@ InputManager:
     m_Name: MenuSubmit_Joy2
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 0
+    negativeButton: joystick 2 button 0
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -1097,7 +1097,7 @@ InputManager:
     m_Name: MenuSubmit_Joy3
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 0
+    negativeButton: joystick 3 button 0
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -1113,7 +1113,7 @@ InputManager:
     m_Name: MenuSubmit_Joy4
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 0
+    negativeButton: joystick 4 button 0
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -1129,7 +1129,7 @@ InputManager:
     m_Name: MenuSubmit_Joy5
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 0
+    negativeButton: joystick 5 button 0
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -1161,7 +1161,7 @@ InputManager:
     m_Name: MenuSubmit_Joy1_PS4
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 1
+    negativeButton: joystick 1 button 1
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -1177,7 +1177,7 @@ InputManager:
     m_Name: MenuSubmit_Joy2_PS4
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 1
+    negativeButton: joystick 2 button 1
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -1193,7 +1193,7 @@ InputManager:
     m_Name: MenuSubmit_Joy3_PS4
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 1
+    negativeButton: joystick 3 button 1
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -1209,7 +1209,7 @@ InputManager:
     m_Name: MenuSubmit_Joy4_PS4
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 1
+    negativeButton: joystick 4 button 1
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -1225,7 +1225,7 @@ InputManager:
     m_Name: MenuSubmit_Joy5_PS4
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 1
+    negativeButton: joystick 5 button 1
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 

@@ -706,7 +706,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 33595506}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &448246373
@@ -799,7 +799,7 @@ Prefab:
     - target: {fileID: 114621805394313040, guid: 47417b3d47cb2ba4b915ee8246e06926,
         type: 2}
       propertyPath: playerHealth
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114621805394313040, guid: 47417b3d47cb2ba4b915ee8246e06926,
         type: 2}

@@ -18,7 +18,7 @@ public class MainMenuController : MenuController
 
         eventSystem.verticalAxis = "Vertical_" + currentPlayerId;
         eventSystem.horizontalAxis = "Horizontal_" + currentPlayerId;
-        eventSystem.submitButton = "MenuSubmit_" + currentPlayerId;
+        eventSystem.submitButton = "Brake_" + currentPlayerId;
 
         credits.GetComponent<Canvas>().enabled = false;
         menu.GetComponent<Canvas>().enabled = true;

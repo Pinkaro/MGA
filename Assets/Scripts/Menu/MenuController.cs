@@ -19,6 +19,7 @@ public class MenuController : MonoBehaviour {
                 continue;
             
             currentPlayerId = PlayerManager.GeneratePlayerId(i + 1, controllerNames[i]); // so we map it to the correct joyNum in InputManager
+            Debug.Log(currentPlayerId);
             break;
         }
     }
