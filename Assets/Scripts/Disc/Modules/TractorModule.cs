@@ -12,10 +12,10 @@ public class TractorModule : ModuleController
 
     public GameObject BeamBlueprint;
 
-    public ParticleSystem TractorBeamBlueprint;
+    public GameObject TractorBeamBlueprint;
 
     private GameObject currentBeam;
-    private ParticleSystem TractorBeam;
+    private GameObject TractorBeam;
 
     private bool firing;
 
@@ -40,6 +40,7 @@ public class TractorModule : ModuleController
             currentBeam.transform.right = Firepoint.position - transform.position;
 
             TractorBeam = Instantiate(TractorBeamBlueprint, this.Firepoint);
+            TractorBeam.transform.right = Firepoint.position - transform.position;
         }
     }
 

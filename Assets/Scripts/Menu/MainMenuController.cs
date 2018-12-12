@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuController : MonoBehaviour {
+public class MainMenuController : MenuController
+{
 
     public GameObject menu;
     public GameObject credits;

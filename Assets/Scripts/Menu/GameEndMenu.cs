@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameEndMenu : MonoBehaviour {
+public class GameEndMenu : MenuController
+{
 
     public void Restart()
     {

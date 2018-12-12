@@ -1,9 +1,9 @@
 TODO:
 - Buttons am Endscreen austauschen
-- In Disc Player falsches Scaling
+## In Disc Player falsches Scaling
 - Healthbar implementieren
 ## Tourette Schriftart ändern
-- Point scaling
+## Point scaling
 - GUI hübschieren
 ## Layer vom Player in Disc
 - Terminal

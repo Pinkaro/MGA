@@ -51,13 +51,16 @@ public class BeamLogic : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("[TRACTOR BEAM] PULL");
+        if (collision.tag == "Boundaries") return;
+
         pullableObjectEntered = true;
         objectToPull = collision.gameObject;
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.tag == "Boundaries") return;
+
         pullableObjectEntered = false;
     }
 }

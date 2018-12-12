@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Assets.Scripts.Player
@@ -69,6 +70,8 @@ namespace Assets.Scripts.Player
             GameObject currentPlayer = null;
 
             currentPlayerId = "MOCK";
+            MenuController.SetPlayerID(currentPlayerId);
+
             currentPlayer = Instantiate(PlayerBlueprint, spawnpoints[0], Quaternion.identity);
             currentPlayer.transform.up = cameraMiddle - spawnpoints[0];
             currentPlayer.GetComponent<SpriteRenderer>().color = playerColors[0];
@@ -106,7 +109,13 @@ namespace Assets.Scripts.Player
                 if (spawnedPlayers > 4)
                     break;
 
-                currentPlayerId = GeneratePlayerId(i + 1); // so we map it to the correct joyNum in InputManager
+                currentPlayerId = GeneratePlayerId(i + 1, controllerNames[i]); // so we map it to the correct joyNum in InputManager
+
+                if (spawnedPlayers == 0)
+                {
+                    MenuController.SetPlayerID(currentPlayerId);
+                }
+
                 currentPlayer = Instantiate(PlayerBlueprint, spawnpoints[spawnedPlayers], Quaternion.identity);
                 currentPlayer.transform.up = cameraMiddle - spawnpoints[spawnedPlayers];
                 currentPlayer.GetComponent<SpriteRenderer>().color = playerColors[spawnedPlayers];
@@ -150,9 +159,16 @@ namespace Assets.Scripts.Player
             }
         }
 
-        private string GeneratePlayerId(int controllerId)
+        private string GeneratePlayerId(int controllerId, string controllerName)
         {
-            return "Joy" + controllerId;
+            if (controllerName.Contains("XBOX 360"))
+            {
+                return "Joy" + controllerId;
+            }
+            else
+            {
+                return "Joy" + controllerId + "_PS4";
+            }
         }
 
         private void InitSpawnpoints()
