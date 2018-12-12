@@ -1,5 +1,5 @@
 TODO:
-- Buttons am Endscreen austauschen
+## Buttons am Endscreen austauschen
 ## In Disc Player falsches Scaling
 - Healthbar implementieren
 ## Tourette Schriftart ändern
