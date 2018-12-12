@@ -12,7 +12,7 @@ public class BeamLogic : MonoBehaviour
 
     private Collider2D thisCollider;
     private GameObject objectToPull;
-    private bool pullableObjectEntered;
+    private bool pullableObjectEntered = false;
     private Vector3 pullDirection;
     private Rigidbody2D otherRb;
 

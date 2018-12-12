@@ -188,6 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TagsIgnoreCollision:
   - Ammunition
+  ToDisableOnDestroy: {fileID: 212802094740429792}
 --- !u!212 &212802094740429792
 SpriteRenderer:
   m_ObjectHideFlags: 1
