@@ -8,6 +8,8 @@ public class EndGameManager : MonoBehaviour
     public float discHealth = 10;
     public DiscController disc;
 
+    public GameObject[] ThingsToActivate;
+
     private PlayerSpaceshipController _survivor;
     private List<PlayerInDiscController> _inDiscControllers;
 
@@ -41,6 +43,11 @@ public class EndGameManager : MonoBehaviour
         
         EndGameStartAnimator.Play(_endGameStartAnimation);
         yield return new WaitForSeconds(2);
+
+        foreach (var things in ThingsToActivate)
+        {
+            things.SetActive(true);
+        }
 
         _survivor.transform.position = _endGameSpawnpoint;
         _survivor.transform.eulerAngles = new Vector3(0, 0, -90);
