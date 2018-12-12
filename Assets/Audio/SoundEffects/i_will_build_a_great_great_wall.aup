@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="i_will_build_a_great_great_wall_data" version="1.3.0" audacityversion="2.1.3" sel0="3.8097703827" sel1="3.8097703827" vpos="0" h="0.0000000000" zoom="60.6335754641" rate="48000.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="iTunSMPB" value=" 00000000 00000840 000003C5 00000000000733FB 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000"/>
+		<tag name="major_brand" value="M4A "/>
+		<tag name="Software" value="Lavf57.11.100"/>
+		<tag name="compatible_brands" value="M4A mp42isom"/>
+		<tag name="minor_version" value="0"/>
+	</tags>
+	<wavetrack name="i_will_build_a_great_great_wall_on_our_southern_bo" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="48000" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="182869">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000a0d.au" len="182869" min="-0.868301" max="0.87602" rms="0.115525"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="i_will_build_a_great_great_wall_on_our_southern_bo" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="48000" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="182869">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000fd7.au" len="182869" min="-0.901023" max="0.777605" rms="0.115863"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
