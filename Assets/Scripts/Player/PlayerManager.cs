@@ -161,7 +161,7 @@ namespace Assets.Scripts.Player
 
         private string GeneratePlayerId(int controllerId, string controllerName)
         {
-            if (controllerName.Contains("XBOX 360"))
+            if (controllerName.Contains("XBOX 360") || controllerName.Contains("Xbox"))
             {
                 return "Joy" + controllerId;
             }
