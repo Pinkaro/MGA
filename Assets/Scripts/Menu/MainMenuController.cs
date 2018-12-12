@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class MainMenuController : MenuController
@@ -9,8 +10,16 @@ public class MainMenuController : MenuController
     public GameObject menu;
     public GameObject credits;
 
-    public void Start()
+    public StandaloneInputModule eventSystem;
+
+    new public void Start()
     {
+        base.Start();
+
+        eventSystem.verticalAxis = "Vertical_" + currentPlayerId;
+        eventSystem.horizontalAxis = "Horizontal_" + currentPlayerId;
+        eventSystem.submitButton = "MenuSubmit_" + currentPlayerId;
+
         credits.GetComponent<Canvas>().enabled = false;
         menu.GetComponent<Canvas>().enabled = true;
     }
