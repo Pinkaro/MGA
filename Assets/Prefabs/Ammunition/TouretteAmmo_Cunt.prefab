@@ -233,6 +233,7 @@ MonoBehaviour:
   - Disc
   - Terminal
   - Team
+  ToDisableOnDestroy: {fileID: 23506870376729768}
 --- !u!114 &114868553283454816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -254,7 +255,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: CUNT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f497a1561e971164ca9db19863705d61, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -334,7 +335,7 @@ MonoBehaviour:
   m_spriteAnimator: {fileID: 0}
   m_isInputParsingRequired: 1
   m_inputSource: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_renderer: {fileID: 23506870376729768}
   m_subTextObjects:
   - {fileID: 0}

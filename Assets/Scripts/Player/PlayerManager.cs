@@ -82,7 +82,7 @@ namespace Assets.Scripts.Player
             // #######################################################################
             Transform PlayerWrapper = Disc.transform.Find("Players");
             GameObject TESTDISCPLAYER = Instantiate(PlayerInDiscBlueprint, PlayerWrapper);
-            TESTDISCPLAYER.transform.localScale -= new Vector3(0.95f, 0.95f, 0.05f);
+            TESTDISCPLAYER.transform.localScale -= new Vector3(0.92f, 0.92f, 0.05f);
             TESTDISCPLAYER.transform.position = new Vector3(0.0f, 0.0f, 0.0f);
             TESTDISCPLAYER.GetComponent<PlayerInDiscController>().PlayerId = currentPlayerId;
             TESTDISCPLAYER.GetComponent<SpriteRenderer>().color = playerColors[0];
@@ -112,19 +112,8 @@ namespace Assets.Scripts.Player
                 currentPlayer.GetComponent<SpriteRenderer>().color = playerColors[spawnedPlayers];
                 currentPlayer.GetComponent<PlayerSpaceshipController>().PlayerId = currentPlayerId;
                 alivePlayers.Add(currentPlayer.GetComponent<PlayerSpaceshipController>());
-
-                //
+ 
                 LogPlayerGeneration(currentPlayerId);
-                //
-                // #######################################################################
-                // ######### ALSO SPAWNS PLAYERS IN DISC FOR NOW, DELETE AFTERWARDS
-                // #######################################################################
-                //Transform PlayerWrapper = Disc.transform.Find("Players");
-                //GameObject TESTDISCPLAYER = Instantiate(PlayerInDiscBlueprint, PlayerWrapper);
-                //TESTDISCPLAYER.transform.localScale -= new Vector3(0.9f, 0.9f, 0.0f);
-                //TESTDISCPLAYER.GetComponent<PlayerInDiscController>().PlayerId = currentPlayerId;
-                //TESTDISCPLAYER.GetComponent<SpriteRenderer>().color = playerColors[spawnedPlayers];
-                // #######################################################################
 
                 spawnedPlayers++;
             }
@@ -134,7 +123,7 @@ namespace Assets.Scripts.Player
         {
             Transform PlayerWrapper = Disc.transform.Find("Players");
             GameObject discPlayer = Instantiate(PlayerInDiscBlueprint, PlayerWrapper);
-            discPlayer.transform.localScale -= new Vector3(0.9f, 0.9f, 0.0f);
+            discPlayer.transform.localScale -= new Vector3(0.95f, 0.95f, 0.0f);
             var inDiscController = discPlayer.GetComponent<PlayerInDiscController>();
             inDiscController.PlayerId = playerId;
             discPlayer.GetComponent<SpriteRenderer>().color = color;

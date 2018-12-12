@@ -8,7 +8,9 @@ public class ProjectileLogic : MonoBehaviour
     public string[] TagsIgnoreCollision;
 
     private float damage;
-	
+
+    public Renderer ToDisableOnDestroy;
+
 	// Update is called once per frame
 	void Update ()
 	{
@@ -17,7 +19,7 @@ public class ProjectileLogic : MonoBehaviour
 
 	    if (!onScreen)
 	    {
-            Destroy(this.gameObject);
+            DestroyProjectile();
 	    }
     }
 
@@ -64,6 +66,19 @@ public class ProjectileLogic : MonoBehaviour
 
         hit?.ApplyHealthEffect(-damage);
 
-        Destroy(this.gameObject);
+        DestroyProjectile();
+    }
+
+    private void DestroyProjectile()
+    {
+        AudioSource audioSource = GetComponent<AudioSource>();
+
+        if(ToDisableOnDestroy != null)
+            ToDisableOnDestroy.enabled = false;
+
+        if (audioSource != null)
+            Destroy(gameObject, GetComponent<AudioSource>().clip.length);
+        else
+            Destroy(gameObject);
     }
 }
