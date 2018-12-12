@@ -10099,6 +10099,41 @@ Prefab:
       propertyPath: TractorBeamBlueprint
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4619355294777112, guid: 8b7b283f34e221f439456dabbdeed3cf, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619355294777112, guid: 8b7b283f34e221f439456dabbdeed3cf, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619355294777112, guid: 8b7b283f34e221f439456dabbdeed3cf, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.99975437
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619355294777112, guid: 8b7b283f34e221f439456dabbdeed3cf, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -0.022163104
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619355294777112, guid: 8b7b283f34e221f439456dabbdeed3cf, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 182.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 212595761460132784, guid: 8b7b283f34e221f439456dabbdeed3cf,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 212595761460132784, guid: 8b7b283f34e221f439456dabbdeed3cf,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.32941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 212595761460132784, guid: 8b7b283f34e221f439456dabbdeed3cf,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.33333334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b7b283f34e221f439456dabbdeed3cf, type: 2}
   m_IsPrefabAsset: 0
