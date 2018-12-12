@@ -107,7 +107,7 @@ public class PlayerManager : MonoBehaviour
                 break;
 
             currentPlayerId = GeneratePlayerId(i + 1, controllerNames[i]); // so we map it to the correct joyNum in InputManager
-                        
+
             currentPlayer = Instantiate(PlayerBlueprint, spawnpoints[spawnedPlayers], Quaternion.identity);
             currentPlayer.transform.up = cameraMiddle - spawnpoints[spawnedPlayers];
             currentPlayer.GetComponent<SpriteRenderer>().color = playerColors[spawnedPlayers];
@@ -153,7 +153,7 @@ public class PlayerManager : MonoBehaviour
 
     public static string GeneratePlayerId(int controllerId, string controllerName)
     {
-        if (controllerName.Contains("XBOX 360"))
+        if (controllerName.Contains("XBOX 360") || controllerName.Contains("Xbox"))
         {
             return "Joy" + controllerId;
         }
