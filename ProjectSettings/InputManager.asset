@@ -1046,6 +1046,22 @@ InputManager:
     axis: 0
     joyNum: 6
   - serializedVersion: 3
+    m_Name: MenuSubmit_MOCK
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: return
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 1
+  - serializedVersion: 3
     m_Name: MenuSubmit_Joy1
     descriptiveName: 
     descriptiveNegativeName: 

@@ -70,6 +70,8 @@ namespace Assets.Scripts.Player
             GameObject currentPlayer = null;
 
             currentPlayerId = "MOCK";
+            MenuController.SetPlayerID(currentPlayerId);
+
             currentPlayer = Instantiate(PlayerBlueprint, spawnpoints[0], Quaternion.identity);
             currentPlayer.transform.up = cameraMiddle - spawnpoints[0];
             currentPlayer.GetComponent<SpriteRenderer>().color = playerColors[0];
@@ -111,7 +113,7 @@ namespace Assets.Scripts.Player
 
                 if (spawnedPlayers == 0)
                 {
-                    // Method to declare player one for main menu control
+                    MenuController.SetPlayerID(currentPlayerId);
                 }
 
                 currentPlayer = Instantiate(PlayerBlueprint, spawnpoints[spawnedPlayers], Quaternion.identity);
