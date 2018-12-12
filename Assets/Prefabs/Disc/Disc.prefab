@@ -1192,6 +1192,7 @@ MonoBehaviour:
   Firepoint: {fileID: 4298544369279208}
   BeamBlueprint: {fileID: 1848326367504874, guid: 23c6879b9c924aa449401df594318911,
     type: 2}
+  TractorBeamBlueprint: {fileID: 0}
 --- !u!114 &114198841690757498
 MonoBehaviour:
   m_ObjectHideFlags: 1

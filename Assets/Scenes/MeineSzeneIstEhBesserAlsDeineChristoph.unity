@@ -10073,31 +10073,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 4207237495270296, guid: 8b7b283f34e221f439456dabbdeed3cf, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4207237495270296, guid: 8b7b283f34e221f439456dabbdeed3cf, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4207237495270296, guid: 8b7b283f34e221f439456dabbdeed3cf, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.104
-      objectReference: {fileID: 0}
-    - target: {fileID: 114042522090170472, guid: 8b7b283f34e221f439456dabbdeed3cf,
-        type: 2}
-      propertyPath: spritesToDye.Array.data[0]
-      value: 
-      objectReference: {fileID: 1160893479}
     - target: {fileID: 1697244156509090, guid: 8b7b283f34e221f439456dabbdeed3cf, type: 2}
       propertyPath: m_Name
       value: Disc (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114162887553876430, guid: 8b7b283f34e221f439456dabbdeed3cf,
-        type: 2}
-      propertyPath: TractorBeamBlueprint
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b7b283f34e221f439456dabbdeed3cf, type: 2}
@@ -10199,11 +10177,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47417b3d47cb2ba4b915ee8246e06926, type: 2}
   m_IsPrefabAsset: 0
---- !u!212 &1160893479 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 212510330472206824, guid: 8b7b283f34e221f439456dabbdeed3cf,
-    type: 2}
-  m_PrefabInternal: {fileID: 848305583}
 --- !u!1 &1291992715
 GameObject:
   m_ObjectHideFlags: 0

@@ -750,7 +750,27 @@ Prefab:
     - target: {fileID: 114887038662115098, guid: 8b7b283f34e221f439456dabbdeed3cf,
         type: 2}
       propertyPath: Health
-      value: 1
+      value: 999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614883787131974, guid: 8b7b283f34e221f439456dabbdeed3cf, type: 2}
+      propertyPath: m_Name
+      value: TractorModule
+      objectReference: {fileID: 0}
+    - target: {fileID: 114162887553876430, guid: 8b7b283f34e221f439456dabbdeed3cf,
+        type: 2}
+      propertyPath: TractorBeamBlueprint
+      value: 
+      objectReference: {fileID: 1111394299409722, guid: 585ec95706df0aa4c8e768fd115974fc,
+        type: 2}
+    - target: {fileID: 114162887553876430, guid: 8b7b283f34e221f439456dabbdeed3cf,
+        type: 2}
+      propertyPath: rotationSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114419168383069876, guid: 8b7b283f34e221f439456dabbdeed3cf,
+        type: 2}
+      propertyPath: rotationSpeed
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b7b283f34e221f439456dabbdeed3cf, type: 2}
@@ -879,7 +899,7 @@ Prefab:
     - target: {fileID: 114343062338343390, guid: 47417b3d47cb2ba4b915ee8246e06926,
         type: 2}
       propertyPath: SpawnMock
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47417b3d47cb2ba4b915ee8246e06926, type: 2}
