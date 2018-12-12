@@ -4,9 +4,9 @@ TODO:
 - Healthbar implementieren
 ## Tourette Schriftart ändern
 ## Point scaling
-- GUI hübschieren
+## GUI hübschieren
 ## Layer vom Player in Disc
-- Terminal
+## Terminal
 - Menü braucht controls (erste JoyNum die erkannt wird)
 - Endscreen hat noch keine Controller Logik
 - Laser credit einfügen: https://freesound.org/people/nsstudios/sounds/321102/

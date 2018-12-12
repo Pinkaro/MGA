@@ -47,6 +47,7 @@ public class EndGameManager : MonoBehaviour
         _survivor.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
         _inDiscControllers.ForEach(p => p.transform.position = Vector3.zero);
+        _inDiscControllers.ForEach(p => p.ClearModule());
 
         yield return new WaitForSeconds(3);
         SetValues();
